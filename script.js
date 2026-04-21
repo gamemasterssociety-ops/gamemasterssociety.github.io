@@ -40,6 +40,39 @@ document.addEventListener("DOMContentLoaded", async () => {
     return value || "";
   };
 
+  const renderGameCards = (games, container) => {
+    if (!container) return;
+
+    games.forEach((game) => {
+      const fragment = gameTemplate.content.cloneNode(true);
+
+      const status = fragment.querySelector(".game-status");
+      const type = fragment.querySelector(".game-type");
+      const title = fragment.querySelector(".game-title");
+      const gm = fragment.querySelector(".game-gm");
+      const category = fragment.querySelector(".game-category");
+      const description = fragment.querySelector(".game-description");
+      const link = fragment.querySelector(".game-link");
+
+      status.textContent = game.status || "Current";
+      type.textContent = game.type || "Adventure";
+      title.textContent = game.title || "Untitled Game";
+      gm.textContent = game.gm ? `GM ${game.gm}` : "GM TBA";
+      category.textContent = prettyCategory(game.category);
+      description.textContent = game.description || "Description coming soon.";
+
+      if (game.discord_link) {
+        link.href = game.discord_link;
+      } else {
+        link.removeAttribute("href");
+        link.textContent = "Link Coming Soon";
+        link.setAttribute("aria-disabled", "true");
+      }
+
+      container.appendChild(fragment);
+    });
+  };
+
   try {
     const [gamesResponse, gmsResponse] = await Promise.all([
       fetch("games.json", { cache: "no-store" }),
@@ -69,77 +102,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     );
 
     if (!shortGames.length) {
-      showEmptyState(
-        shortGamesContainer,
-        "No short adventures are listed yet."
-      );
+      showEmptyState(shortGamesContainer, "No short adventures are listed yet.");
     } else {
-      shortGames.forEach((game) => {
-        const fragment = gameTemplate.content.cloneNode(true);
-
-        const status = fragment.querySelector(".game-status");
-        const type = fragment.querySelector(".game-type");
-        const title = fragment.querySelector(".game-title");
-        const gm = fragment.querySelector(".game-gm");
-        const category = fragment.querySelector(".game-category");
-        const description = fragment.querySelector(".game-description");
-        const link = fragment.querySelector(".game-link");
-
-        status.textContent = game.status || "Current";
-        type.textContent = game.type || "Adventure";
-        title.textContent = game.title || "Untitled Game";
-        gm.textContent = game.gm ? `GM ${game.gm}` : "GM TBA";
-        category.textContent = prettyCategory(game.category);
-        description.textContent =
-          game.description || "Description coming soon.";
-
-        if (game.discord_link) {
-          link.href = game.discord_link;
-        } else {
-          link.removeAttribute("href");
-          link.textContent = "Link Coming Soon";
-          link.setAttribute("aria-disabled", "true");
-        }
-
-        shortGamesContainer.appendChild(fragment);
-      });
+      renderGameCards(shortGames, shortGamesContainer);
     }
 
     if (!longGames.length) {
-      showEmptyState(
-        longGamesContainer,
-        "No long adventures are listed yet."
-      );
+      showEmptyState(longGamesContainer, "No long adventures are listed yet.");
     } else {
-      longGames.forEach((game) => {
-        const fragment = gameTemplate.content.cloneNode(true);
-
-        const status = fragment.querySelector(".game-status");
-        const type = fragment.querySelector(".game-type");
-        const title = fragment.querySelector(".game-title");
-        const gm = fragment.querySelector(".game-gm");
-        const category = fragment.querySelector(".game-category");
-        const description = fragment.querySelector(".game-description");
-        const link = fragment.querySelector(".game-link");
-
-        status.textContent = game.status || "Current";
-        type.textContent = game.type || "Adventure";
-        title.textContent = game.title || "Untitled Game";
-        gm.textContent = game.gm ? `GM ${game.gm}` : "GM TBA";
-        category.textContent = prettyCategory(game.category);
-        description.textContent =
-          game.description || "Description coming soon.";
-
-        if (game.discord_link) {
-          link.href = game.discord_link;
-        } else {
-          link.removeAttribute("href");
-          link.textContent = "Link Coming Soon";
-          link.setAttribute("aria-disabled", "true");
-        }
-
-        longGamesContainer.appendChild(fragment);
-      });
+      renderGameCards(longGames, longGamesContainer);
     }
 
     if (!gms.length) {
@@ -150,10 +121,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const name = fragment.querySelector(".gm-name");
         const role = fragment.querySelector(".gm-role");
+        const bio = fragment.querySelector(".gm-bio");
         const link = fragment.querySelector(".gm-link");
 
         name.textContent = gmEntry.name || "Game Master";
         role.textContent = gmEntry.role || "Game Master";
+        bio.textContent = gmEntry.short_bio || "";
 
         if (gmEntry.discord_link) {
           link.href = gmEntry.discord_link;
