@@ -16,49 +16,96 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  const shortGamesContainer = document.getElementById("short-games");
-  const longGamesContainer = document.getElementById("long-games");
+  const gamesGrid = document.getElementById("games-grid");
   const gmGrid = document.getElementById("gm-grid");
-
   const gameTemplate = document.getElementById("game-card-template");
   const gmTemplate = document.getElementById("gm-card-template");
+
+  const searchInput = document.getElementById("game-search");
+  const systemFilter = document.getElementById("system-filter");
+  const statusFilter = document.getElementById("status-filter");
+  const formatFilter = document.getElementById("format-filter");
+  const clearFiltersButton = document.getElementById("clear-filters");
+  const resultsSummary = document.getElementById("results-summary");
 
   const showEmptyState = (container, message) => {
     if (!container) return;
     container.innerHTML = `<div class="empty-state">${message}</div>`;
   };
 
-  const normalizeCategory = (value) => {
+  const titleCase = (value) => {
     if (!value) return "";
-    return value.toLowerCase().trim();
+    return value
+      .toString()
+      .replace(/[-_]/g, " ")
+      .replace(/\b\w/g, (char) => char.toUpperCase());
   };
 
-  const prettyCategory = (value) => {
-    const normalized = normalizeCategory(value);
-    if (normalized === "short") return "Short Adventure";
-    if (normalized === "long") return "Long Adventure";
-    return value || "";
+  const prettyStatus = (value) => {
+    const map = {
+      recruiting: "Recruiting",
+      running: "Running",
+      full: "Full",
+      upcoming: "Upcoming",
+      archived: "Archived"
+    };
+    return map[value] || titleCase(value);
   };
 
-  const renderGameCards = (games, container) => {
-    if (!container) return;
+  const prettyFormat = (value) => {
+    const map = {
+      short: "Short Adventure",
+      long: "Long Adventure"
+    };
+    return map[value] || titleCase(value);
+  };
+
+  const populateSelect = (select, values, placeholder) => {
+    if (!select) return;
+    select.innerHTML = `<option value="">${placeholder}</option>`;
+
+    values.forEach((value) => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent =
+        select.id === "status-filter"
+          ? prettyStatus(value)
+          : select.id === "format-filter"
+          ? prettyFormat(value)
+          : value;
+      select.appendChild(option);
+    });
+  };
+
+  const renderGameCards = (games) => {
+    if (!gamesGrid || !gameTemplate) return;
+
+    gamesGrid.innerHTML = "";
+
+    if (!games.length) {
+      showEmptyState(
+        gamesGrid,
+        "No games match your current filters. Try clearing them and browsing the full lineup."
+      );
+      return;
+    }
 
     games.forEach((game) => {
       const fragment = gameTemplate.content.cloneNode(true);
 
       const status = fragment.querySelector(".game-status");
-      const type = fragment.querySelector(".game-type");
+      const format = fragment.querySelector(".game-format");
       const title = fragment.querySelector(".game-title");
+      const system = fragment.querySelector(".game-system");
       const gm = fragment.querySelector(".game-gm");
-      const category = fragment.querySelector(".game-category");
       const description = fragment.querySelector(".game-description");
       const link = fragment.querySelector(".game-link");
 
-      status.textContent = game.status || "Current";
-      type.textContent = game.type || "Adventure";
+      status.textContent = prettyStatus(game.status || "running");
+      format.textContent = prettyFormat(game.format || "");
       title.textContent = game.title || "Untitled Game";
+      system.textContent = game.system || "System TBA";
       gm.textContent = game.gm ? `GM ${game.gm}` : "GM TBA";
-      category.textContent = prettyCategory(game.category);
       description.textContent = game.description || "Description coming soon.";
 
       if (game.discord_link) {
@@ -69,7 +116,41 @@ document.addEventListener("DOMContentLoaded", async () => {
         link.setAttribute("aria-disabled", "true");
       }
 
-      container.appendChild(fragment);
+      gamesGrid.appendChild(fragment);
+    });
+  };
+
+  const renderGMCards = (gms) => {
+    if (!gmGrid || !gmTemplate) return;
+
+    gmGrid.innerHTML = "";
+
+    if (!gms.length) {
+      showEmptyState(gmGrid, "No Game Masters are listed yet.");
+      return;
+    }
+
+    gms.forEach((gmEntry) => {
+      const fragment = gmTemplate.content.cloneNode(true);
+
+      const name = fragment.querySelector(".gm-name");
+      const role = fragment.querySelector(".gm-role");
+      const bio = fragment.querySelector(".gm-bio");
+      const link = fragment.querySelector(".gm-link");
+
+      name.textContent = gmEntry.name || "Game Master";
+      role.textContent = gmEntry.role || "Game Master";
+      bio.textContent = gmEntry.short_bio || "";
+
+      if (gmEntry.discord_link) {
+        link.href = gmEntry.discord_link;
+      } else {
+        link.removeAttribute("href");
+        link.textContent = "Link Coming Soon";
+        link.setAttribute("aria-disabled", "true");
+      }
+
+      gmGrid.appendChild(fragment);
     });
   };
 
@@ -90,69 +171,87 @@ document.addEventListener("DOMContentLoaded", async () => {
     const gamesData = await gamesResponse.json();
     const gmsData = await gmsResponse.json();
 
-    const games = Array.isArray(gamesData.games) ? gamesData.games : [];
-    const gms = Array.isArray(gmsData.gms) ? gmsData.gms : [];
+    const allGames = Array.isArray(gamesData.games) ? gamesData.games : [];
+    const allGms = Array.isArray(gmsData.gms) ? gmsData.gms : [];
 
-    const shortGames = games.filter(
-      (game) => normalizeCategory(game.category) === "short"
-    );
+    renderGMCards(allGms);
 
-    const longGames = games.filter(
-      (game) => normalizeCategory(game.category) === "long"
-    );
+    if (gamesGrid) {
+      const systems = [...new Set(allGames.map((game) => game.system).filter(Boolean))].sort();
+      const statuses = [...new Set(allGames.map((game) => game.status).filter(Boolean))].sort();
+      const formats = [...new Set(allGames.map((game) => game.format).filter(Boolean))].sort();
 
-    if (!shortGames.length) {
-      showEmptyState(shortGamesContainer, "No short adventures are listed yet.");
-    } else {
-      renderGameCards(shortGames, shortGamesContainer);
-    }
+      populateSelect(systemFilter, systems, "All systems");
+      populateSelect(statusFilter, statuses, "All statuses");
+      populateSelect(formatFilter, formats, "All formats");
 
-    if (!longGames.length) {
-      showEmptyState(longGamesContainer, "No long adventures are listed yet.");
-    } else {
-      renderGameCards(longGames, longGamesContainer);
-    }
+      const applyFilters = () => {
+        const searchTerm = (searchInput?.value || "").trim().toLowerCase();
+        const selectedSystem = systemFilter?.value || "";
+        const selectedStatus = statusFilter?.value || "";
+        const selectedFormat = formatFilter?.value || "";
 
-    if (!gms.length) {
-      showEmptyState(gmGrid, "No Game Masters are listed yet.");
-    } else {
-      gms.forEach((gmEntry) => {
-        const fragment = gmTemplate.content.cloneNode(true);
+        const filteredGames = allGames.filter((game) => {
+          const haystack = [
+            game.title,
+            game.gm,
+            game.system,
+            game.description,
+            game.status,
+            game.format
+          ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
 
-        const name = fragment.querySelector(".gm-name");
-        const role = fragment.querySelector(".gm-role");
-        const bio = fragment.querySelector(".gm-bio");
-        const link = fragment.querySelector(".gm-link");
+          const matchesSearch = !searchTerm || haystack.includes(searchTerm);
+          const matchesSystem = !selectedSystem || game.system === selectedSystem;
+          const matchesStatus = !selectedStatus || game.status === selectedStatus;
+          const matchesFormat = !selectedFormat || game.format === selectedFormat;
 
-        name.textContent = gmEntry.name || "Game Master";
-        role.textContent = gmEntry.role || "Game Master";
-        bio.textContent = gmEntry.short_bio || "";
+          return matchesSearch && matchesSystem && matchesStatus && matchesFormat;
+        });
 
-        if (gmEntry.discord_link) {
-          link.href = gmEntry.discord_link;
-        } else {
-          link.removeAttribute("href");
-          link.textContent = "Link Coming Soon";
-          link.setAttribute("aria-disabled", "true");
+        if (resultsSummary) {
+          resultsSummary.innerHTML = `<strong>${filteredGames.length}</strong> game${filteredGames.length === 1 ? "" : "s"} shown`;
         }
 
-        gmGrid.appendChild(fragment);
+        renderGameCards(filteredGames);
+      };
+
+      [searchInput, systemFilter, statusFilter, formatFilter].forEach((control) => {
+        if (!control) return;
+        control.addEventListener("input", applyFilters);
+        control.addEventListener("change", applyFilters);
       });
+
+      if (clearFiltersButton) {
+        clearFiltersButton.addEventListener("click", () => {
+          if (searchInput) searchInput.value = "";
+          if (systemFilter) systemFilter.value = "";
+          if (statusFilter) statusFilter.value = "";
+          if (formatFilter) formatFilter.value = "";
+          applyFilters();
+        });
+      }
+
+      applyFilters();
     }
   } catch (error) {
     console.error(error);
 
-    showEmptyState(
-      shortGamesContainer,
-      "Unable to load games right now. Please check games.json."
-    );
-    showEmptyState(
-      longGamesContainer,
-      "Unable to load games right now. Please check games.json."
-    );
-    showEmptyState(
-      gmGrid,
-      "Unable to load Game Masters right now. Please check gms.json."
-    );
+    if (gamesGrid) {
+      showEmptyState(
+        gamesGrid,
+        "Unable to load games right now. Please check games.json."
+      );
+    }
+
+    if (gmGrid) {
+      showEmptyState(
+        gmGrid,
+        "Unable to load Game Masters right now. Please check gms.json."
+      );
+    }
   }
 });
