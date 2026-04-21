@@ -1,66 +1,4 @@
 {
-  "gms": [
-    {
-      "name": "John",
-      "role": "Game Master",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1080527136613466224"
-    },
-    {
-      "name": "Mike",
-      "role": "Game Master",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1073293161880879165"
-    },
-    {
-      "name": "Jess",
-      "role": "Game Master",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1089638366590550246"
-    },
-    {
-      "name": "Ken",
-      "role": "Game Master",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1143991796486111303"
-    },
-    {
-      "name": "Dylan",
-      "role": "Game Master",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1216835354057904279"
-    },
-    {
-      "name": "Adam",
-      "role": "Game Master",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1278402584239013950"
-    },
-    {
-      "name": "Glenn",
-      "role": "Game Master",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1328830637263687761"
-    },
-    {
-      "name": "Abby",
-      "role": "Game Master",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1358987254915137607"
-    },
-    {
-      "name": "Michelle",
-      "role": "Game Master",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1389233883974996048"
-    },
-    {
-      "name": "Jason",
-      "role": "Game Master",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1446986646867415233"
-    },
-    {
-      "name": "Lucas",
-      "role": "Game Master",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1460811952585572393"
-    },
-    {
-      "name": "Justin",
-      "role": "Game Master",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1080172448311431168"
-    }
-  ],
   "games": [
     {
       "title": "Rise of the Soulbound Constructs",
@@ -122,7 +60,7 @@
       "status": "Current",
       "type": "6–7 Sessions",
       "category": "long",
-      "description": "A current long adventure run by GM Adam. Add the direct adventure channel link here once you have it.",
+      "description": "A current long adventure run by GM Adam. Visit the adventure channel to connect directly with the GM about seats and tickets.",
       "discord_link": "https://discordapp.com/channels/1067877863438692472/1494739685879320667"
     }
   ]
