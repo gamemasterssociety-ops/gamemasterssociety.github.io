@@ -41,15 +41,24 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   try {
-    const response = await fetch("games.json", { cache: "no-store" });
+    const [gamesResponse, gmsResponse] = await Promise.all([
+      fetch("games.json", { cache: "no-store" }),
+      fetch("gms.json", { cache: "no-store" })
+    ]);
 
-    if (!response.ok) {
-      throw new Error(`Failed to load games.json (${response.status})`);
+    if (!gamesResponse.ok) {
+      throw new Error(`Failed to load games.json (${gamesResponse.status})`);
     }
 
-    const data = await response.json();
-    const games = Array.isArray(data.games) ? data.games : [];
-    const gms = Array.isArray(data.gms) ? data.gms : [];
+    if (!gmsResponse.ok) {
+      throw new Error(`Failed to load gms.json (${gmsResponse.status})`);
+    }
+
+    const gamesData = await gamesResponse.json();
+    const gmsData = await gmsResponse.json();
+
+    const games = Array.isArray(gamesData.games) ? gamesData.games : [];
+    const gms = Array.isArray(gmsData.gms) ? gmsData.gms : [];
 
     const shortGames = games.filter(
       (game) => normalizeCategory(game.category) === "short"
@@ -170,7 +179,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     );
     showEmptyState(
       gmGrid,
-      "Unable to load Game Masters right now. Please check games.json."
+      "Unable to load Game Masters right now. Please check gms.json."
     );
   }
 });
