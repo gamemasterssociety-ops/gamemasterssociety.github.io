@@ -1,76 +1,67 @@
 {
-  "gms": [
+  "games": [
     {
-      "name": "John",
-      "role": "Game Master",
-      "short_bio": "An improv-forward GM who blends humor, gritty realism, and collaborative worldbuilding. John is especially strong with young players and newer groups, and brings an inclusive, judgment-free energy to the table.",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1080527136613466224"
+      "title": "Rise of the Soulbound Constructs",
+      "gm": "Jason",
+      "system": "D&D 5e",
+      "status": "running",
+      "format": "short",
+      "description": "A current short adventure from Game Master Society. Visit the adventure channel to inquire about seats directly with the GM.",
+      "discord_link": "https://discordapp.com/channels/1067877863438692472/1447593618683727962"
     },
     {
-      "name": "Mike",
-      "role": "Game Master",
-      "short_bio": "A highly adaptable GM with decades of experience, Mike tailors each game to the group while leaning hard into immersion, rule-of-cool play, and wild settings like Planescape and the Feywild where anything can happen.",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1073293161880879165"
+      "title": "V5: Vampire the Masquerade",
+      "gm": "Ken",
+      "system": "Vampire: The Masquerade",
+      "status": "running",
+      "format": "short",
+      "description": "A current short adventure in the World of Darkness. Visit the adventure channel to ask questions and connect with the GM.",
+      "discord_link": "https://discordapp.com/channels/1067877863438692472/1439653417793622056"
     },
     {
-      "name": "Jess",
-      "role": "Game Master",
-      "short_bio": "A collaborative storyteller who builds adventures around the party’s characters, choices, and priorities. Jess runs immersive, character-driven games where backstories matter and every player helps shape the story.",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1089638366590550246"
+      "title": "Empire Records",
+      "gm": "Michelle",
+      "system": "D&D 5e",
+      "status": "recruiting",
+      "format": "short",
+      "description": "A short adventure currently recruiting players. Head to the Discord channel to learn more and arrange your seat.",
+      "discord_link": "https://discordapp.com/channels/1067877863438692472/1492914560968032338"
     },
     {
-      "name": "Ken",
-      "role": "Game Master",
-      "short_bio": "Ken runs immersive, surreal, and thought-provoking games with a strong roleplay core. His tables lean toward emotionally invested play, layered character scenes, and deeper themes.",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1143991796486111303"
+      "title": "Call of Cthulhu",
+      "gm": "Michelle",
+      "system": "Call of Cthulhu",
+      "status": "running",
+      "format": "short",
+      "description": "A featured short horror adventure in the current lineup. Use the adventure channel to inquire directly with the GM.",
+      "discord_link": "https://discordapp.com/channels/1067877863438692472/1439653284288659456"
     },
     {
-      "name": "Dylan",
-      "role": "Game Master",
-      "short_bio": "A roleplay-first GM who loves immersive stories, character conflict, mystery, and dramatic twists. Dylan favors creativity over rigidity and brings strong theatrical energy to the table.",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1216835354057904279"
+      "title": "Strixhaven",
+      "gm": "Lucas",
+      "system": "D&D 5e",
+      "status": "running",
+      "format": "long",
+      "description": "An ongoing long adventure for players looking for a deeper table experience. Visit the channel to connect directly with the GM.",
+      "discord_link": "https://discordapp.com/channels/1067877863438692472/1457745015752097884"
     },
     {
-      "name": "Adam",
-      "role": "Game Master",
-      "short_bio": "Adam builds collaborative stories with real consequences, balancing darker grit with the occasional gonzo spark. His table rewards creativity, flexibility, and shared storytelling.",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1278402584239013950"
+      "title": "Fall of Itzli",
+      "gm": "Michelle",
+      "system": "D&D 5e",
+      "status": "recruiting",
+      "format": "long",
+      "description": "A long adventure currently recruiting. Use the Discord channel to ask questions, learn more, and purchase tickets from the GM.",
+      "discord_link": "https://discordapp.com/channels/1067877863438692472/1491206046025257030"
     },
     {
-      "name": "Glenn",
-      "role": "Game Master",
-      "short_bio": "A high-energy GM who leans into props, minis, terrain, music, and memorable battle moments. Glenn adapts to the players in front of him and loves tactile, dramatic immersion.",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1328830637263687761"
-    },
-    {
-      "name": "Abby",
-      "role": "Game Master",
-      "short_bio": "A story-focused GM who prioritizes character engagement, roleplay, and rule-of-cool moments. Abby loves homebrew, immersive props, and short adventures that feel personal and fun.",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1358987254915137607"
-    },
-    {
-      "name": "Michelle",
-      "role": "Game Master",
-      "short_bio": "Michelle creates immersive, roleplay-heavy games shaped by history, atmosphere, and emotional tension. Her table centers consent, communication, and comfort while delivering rich, memorable experiences.",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1389233883974996048"
-    },
-    {
-      "name": "Jason",
-      "role": "Game Master",
-      "short_bio": "Jason builds vivid worlds that encourage players to interact with the environment and each other in meaningful ways. His games prioritize shared storytelling and a welcoming table culture.",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1446986646867415233"
-    },
-    {
-      "name": "Lucas",
-      "role": "Game Master",
-      "short_bio": "A theatrical, roleplay-first GM who makes each table feel like a shared stage. Lucas blends memorable characters, strong imagery, and player-focused storytelling into immersive adventures.",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1460811952585572393"
-    },
-    {
-      "name": "Justin",
-      "role": "Game Master",
-      "short_bio": "Justin runs cinematic, narrative-driven games that flex to the group’s mood and interests. He is patient, versatile, and especially good at helping players realize big character ideas.",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1080172448311431168"
+      "title": "Twilight 1984: The Allegheny Uprising",
+      "gm": "Adam",
+      "system": "Twilight: 2000",
+      "status": "running",
+      "format": "long",
+      "description": "A current long adventure run by GM Adam. Visit the adventure channel to connect directly about seats and ticketing.",
+      "discord_link": "https://discordapp.com/channels/1067877863438692472/1494739685879320667"
     }
   ]
 }
