@@ -512,6 +512,12 @@ h2 {
   color: var(--text);
 }
 
+.gm-bio {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
 .info-card h3 {
   font-size: 1.15rem;
   color: var(--gold-bright);
