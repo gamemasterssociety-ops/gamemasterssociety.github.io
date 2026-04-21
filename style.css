@@ -52,12 +52,6 @@ a {
   text-decoration: none;
 }
 
-code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-size: 0.95em;
-  color: var(--gold-bright);
-}
-
 .site-shell {
   min-height: 100vh;
 }
@@ -118,10 +112,10 @@ h4,
 .info-number,
 .community-link-label,
 .game-status,
-.game-type,
-.game-category,
+.game-format,
 .gm-role,
-.footer-title {
+.footer-title,
+.results-summary strong {
   font-family: "Cinzel", Georgia, serif;
   letter-spacing: 0.03em;
 }
@@ -184,6 +178,10 @@ h4,
   padding: 72px 0 36px;
 }
 
+.hero-section-compact {
+  padding-bottom: 24px;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.9fr);
@@ -197,7 +195,10 @@ h4,
 .gm-card,
 .info-card,
 .link-panel,
-.announcement-inner {
+.announcement-inner,
+.filters-panel,
+.copy-panel,
+.value-card {
   background: linear-gradient(180deg, rgba(13, 24, 44, 0.94), rgba(8, 17, 31, 0.96));
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
@@ -240,8 +241,13 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(2.6rem, 5vw, 4.7rem);
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
   max-width: 11ch;
+  color: var(--text);
+}
+
+h2 {
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
   color: var(--text);
 }
 
@@ -253,7 +259,11 @@ h1 {
 .gm-card p,
 .hero-panel-card p,
 .footer-copy,
-.footer-meta p {
+.footer-meta p,
+.copy-panel p,
+.value-card p,
+.results-summary,
+.feature-list li {
   color: var(--muted);
 }
 
@@ -264,7 +274,8 @@ h1 {
 }
 
 .hero-actions,
-.game-card-actions {
+.game-card-actions,
+.filters-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -335,22 +346,13 @@ h1 {
   margin-bottom: 10px;
 }
 
-.stacked-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.feature-list {
+  padding-left: 20px;
+  margin: 0;
 }
 
-.stacked-links a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 42px;
-  padding: 0 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(215, 161, 58, 0.16);
-  background: rgba(215, 161, 58, 0.06);
-  color: var(--text);
-  font-weight: 600;
+.feature-list li + li {
+  margin-top: 8px;
 }
 
 .announcement-strip {
@@ -364,7 +366,6 @@ h1 {
 
 .announcement-inner p {
   margin: 0;
-  color: var(--muted);
 }
 
 .announcement-inner strong {
@@ -383,37 +384,66 @@ h1 {
   margin-bottom: 24px;
 }
 
-h2 {
-  font-size: clamp(1.9rem, 3vw, 2.8rem);
-  color: var(--text);
-}
-
 .section-text {
   margin: 12px 0 0;
   max-width: 68ch;
 }
 
-.game-group + .game-group {
-  margin-top: 34px;
+.filters-panel {
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 22px;
 }
 
-.group-heading {
-  margin-bottom: 16px;
+.filters-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 14px;
 }
 
-.group-heading h3 {
-  font-size: clamp(1.2rem, 2vw, 1.7rem);
+.filter-field {
+  display: grid;
+  gap: 8px;
+}
+
+.filter-field span {
   color: var(--gold-bright);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-.group-heading span {
+.filter-field input,
+.filter-field select {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 14px;
+  border: 1px solid rgba(215, 161, 58, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  padding: 0 14px;
+  font: inherit;
+}
+
+.filter-field input::placeholder {
   color: var(--muted-soft);
-  font-size: 0.82em;
+}
+
+.filters-actions {
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.results-summary {
+  margin: 0;
 }
 
 .card-grid,
 .gm-grid,
-.info-grid {
+.info-grid,
+.values-grid {
   display: grid;
   gap: 18px;
 }
@@ -422,17 +452,24 @@ h2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.card-grid-wide {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .gm-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.info-grid {
+.info-grid,
+.values-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .game-card,
 .gm-card,
-.info-card {
+.info-card,
+.copy-panel,
+.value-card {
   border-radius: var(--radius-lg);
   padding: 22px;
 }
@@ -451,8 +488,7 @@ h2 {
 }
 
 .game-status,
-.game-type,
-.game-category,
+.game-format,
 .gm-role {
   display: inline-flex;
   align-items: center;
@@ -471,17 +507,22 @@ h2 {
   color: var(--gold-bright);
 }
 
-.game-type,
-.game-category,
+.game-format,
 .gm-role {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(215, 161, 58, 0.12);
   color: var(--muted);
 }
 
-.game-title {
-  font-size: 1.32rem;
+.game-title,
+.gm-name,
+.value-card h3,
+.info-card h3 {
   color: var(--text);
+}
+
+.game-title {
+  font-size: 1.28rem;
 }
 
 .game-meta {
@@ -490,14 +531,22 @@ h2 {
   gap: 10px;
 }
 
+.game-system,
 .game-gm {
-  color: var(--gold-bright);
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(215, 161, 58, 0.12);
+  color: var(--muted);
 }
 
-.game-description {
+.game-description,
+.gm-bio {
   margin: 0;
-  flex: 1;
 }
 
 .gm-card {
@@ -509,18 +558,19 @@ h2 {
 
 .gm-name {
   font-size: 1.14rem;
-  color: var(--text);
 }
 
 .gm-bio {
-  margin: 0;
-  color: var(--muted);
   font-size: 0.96rem;
+}
+
+.info-number {
+  font-size: 0.86rem;
+  color: var(--gold-bright);
 }
 
 .info-card h3 {
   font-size: 1.15rem;
-  color: var(--gold-bright);
   margin-top: 8px;
 }
 
@@ -528,9 +578,17 @@ h2 {
   margin: 10px 0 0;
 }
 
-.info-number {
-  font-size: 0.86rem;
-  color: var(--gold-bright);
+.copy-panel p {
+  margin: 0;
+}
+
+.value-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  margin: 0;
 }
 
 .link-panel {
@@ -612,11 +670,14 @@ h2 {
 @media (max-width: 1100px) {
   .hero-grid,
   .gm-grid,
-  .info-grid {
+  .info-grid,
+  .values-grid,
+  .card-grid-wide {
     grid-template-columns: 1fr;
   }
 
-  .card-grid {
+  .card-grid,
+  .filters-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -678,9 +739,17 @@ h2 {
   .link-panel,
   .game-card,
   .gm-card,
-  .info-card {
+  .info-card,
+  .filters-panel,
+  .copy-panel,
+  .value-card {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .filters-actions {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 
@@ -708,7 +777,8 @@ h2 {
   }
 
   .hero-actions,
-  .game-card-actions {
+  .game-card-actions,
+  .filters-actions {
     flex-direction: column;
     align-items: stretch;
   }
