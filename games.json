@@ -102,29 +102,31 @@
       ],
       "discord_link": "https://discordapp.com/channels/1067877863438692472/1439653284288659456"
     },
-    {
-      "title": "The Fall of Itzli",
-      "gm": "Michelle",
-      "system": "Call of Cthulhu",
-      "status": "recruiting",
-      "format": "long",
-      "short_description": "Earthquakes, disappearances, ritual killings, and a burning institute point to something darker in Holmouth.",
-      "description": "A New England mystery where strange disasters and quiet denial hint at deeper horrors moving beneath the surface.",
-      "full_description": "December 13, 1926. 1:30 AM. Holmouth, New Hampshire.\n\nShortly after 1:30 AM a 4.5 earthquake was felt directly northwest of Holmouth. Minor damage was reported from local homes and businesses. Residents later claimed to see smoke and a large black shadow northwest of town. Further investigation revealed The Holmouth Institute in flames. Four deceased patients were found on the grounds while the fire brigade attempted to extinguish the blaze. The historic mausoleum on the grounds was also partially destroyed.\n\nThe quiet towns of New Hampshire have gone through a few rough years. Mysterious disappearances, ritual killings, unexplained earthquakes. The residents seem to have become accustomed to these kinds of events.\n\nNo one thinks these events are related. Unfortunate circumstances, that is what people say. But work is being done in the shadows. There may be more to these stories than meets the eye.\n\nWill anyone investigate further?",
-      "price_per_session": 25,
-      "players_max": 6,
-      "session_length_hours": 3,
-      "schedule": "TBD, Sundays, Saturdays, or Thursdays",
-      "experience_level": "All welcome",
-      "tags": [
-        "horror",
-        "mystery",
-        "investigation",
-        "new england",
-        "cosmic horror"
-      ],
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1491206046025257030"
-    },
+{
+  "title": "The Fall of Itzli",
+  "gm": "Michelle",
+  "system": "Call of Cthulhu",
+  "status": "recruiting",
+  "format": "long",
+  "short_description": "A New England mystery of earthquakes, disappearances, and ritual killings. 2 seats claimed, 4 still open.",
+  "description": "A New England mystery where strange disasters and quiet denial hint at deeper horrors moving beneath the surface.",
+  "full_description": "December 13, 1926. 1:30 AM. Holmouth, New Hampshire.\n\nShortly after 1:30 AM a 4.5 earthquake was felt directly northwest of Holmouth. Minor damage was reported from local homes and businesses. Residents later claimed to see smoke and a large black shadow northwest of town. Further investigation revealed The Holmouth Institute in flames. Four deceased patients were found on the grounds while the fire brigade attempted to extinguish the blaze. The historic mausoleum on the grounds was also partially destroyed.\n\nThe quiet towns of New Hampshire have gone through a few rough years. Mysterious disappearances, ritual killings, unexplained earthquakes. The residents seem to have become accustomed to these kinds of events.\n\nNo one thinks these events are related. Unfortunate circumstances, that is what people say. But work is being done in the shadows. There may be more to these stories than meets the eye.\n\nWill anyone investigate further?",
+  "price_per_session": 25,
+  "players_max": 6,
+  "seats_available": 4,
+  "session_length_hours": 3,
+  "schedule": "TBD, Sundays, Saturdays, or Thursdays",
+  "experience_level": "All welcome",
+  "tags": [
+    "horror",
+    "mystery",
+    "investigation",
+    "new england",
+    "cosmic horror",
+    "4 seats open"
+  ],
+  "discord_link": "https://discordapp.com/channels/1067877863438692472/1491206046025257030"
+}
     {
       "title": "Strixhaven: Freshman Year",
       "subtitle": "Curriculum of Chaos",
