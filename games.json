@@ -54,14 +54,5 @@
       "description": "A long adventure currently recruiting. Use the Discord channel to ask questions, learn more, and purchase tickets from the GM.",
       "discord_link": "https://discordapp.com/channels/1067877863438692472/1491206046025257030"
     },
-    {
-      "title": "Twilight 1984: The Allegheny Uprising",
-      "gm": "Adam",
-      "system": "Twilight: 2000",
-      "status": "running",
-      "format": "long",
-      "description": "A current long adventure run by GM Adam. Visit the adventure channel to connect directly about seats and ticketing.",
-      "discord_link": "https://discordapp.com/channels/1067877863438692472/1494739685879320667"
-    }
   ]
 }
