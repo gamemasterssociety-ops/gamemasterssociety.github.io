@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="About Game Master Society — who we are, what we stand for, and the kinds of games we run."
+    content="Game Master Society — discover current adventures, meet the Game Masters, and find your next table."
   />
-  <title>About | Game Master Society</title>
+  <title>Game Master Society</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -50,19 +50,19 @@
     </header>
 
     <main id="top">
-      <section class="hero-section hero-section-compact">
+      <section class="hero-section">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">About Game Master Society</p>
-            <h1>Built around strong tables and stronger stories.</h1>
+            <p class="eyebrow">Professional game masters. Better stories.</p>
+            <h1>Find your next adventure.</h1>
             <p class="hero-text">
-              Game Master Society exists to create welcoming, professionally run tabletop
-              experiences for players who want memorable adventures, clear expectations, and
-              GMs who care about the craft of running a great game.
+              Explore current Game Master Society offerings, meet the GMs behind each table,
+              and find the game that fits your style. From short adventures to longer campaigns,
+              this is the best place to see what is running now.
             </p>
 
             <div class="hero-actions">
-              <a class="button button-primary" href="index.html#current-games">Browse Current Games</a>
+              <a class="button button-primary" href="#current-games">Browse Current Games</a>
               <a
                 class="button button-secondary"
                 href="https://discord.gg/zRsRBBMPQ"
@@ -76,142 +76,121 @@
 
           <aside class="hero-panel">
             <div class="hero-panel-card">
-              <span class="panel-label">At a Glance</span>
+              <span class="panel-label">What You’ll Find</span>
               <ul class="feature-list">
-                <li>Professional and aspiring Game Masters</li>
                 <li>Short adventures and longer campaigns</li>
-                <li>Multiple systems, tones, and genres</li>
-                <li>Community-first play through Discord</li>
+                <li>Different systems, tones, and play styles</li>
+                <li>Direct paths to each game’s Discord channel</li>
+                <li>Game Masters with distinct strengths and specialties</li>
               </ul>
             </div>
 
             <div class="hero-panel-card">
-              <span class="panel-label">What We Do</span>
+              <span class="panel-label">Tickets & Seats</span>
               <p>
-                We connect players with Game Masters who bring different strengths to the table,
-                from story-rich fantasy and horror to mystery, drama, and high-energy action.
+                Seats are handled directly by each GM. Visit the Discord channel for the
+                adventure you are interested in to ask questions and arrange your spot.
               </p>
             </div>
           </aside>
         </div>
       </section>
 
-      <section class="content-section">
+      <section class="announcement-strip">
+        <div class="container announcement-inner">
+          <p>
+            <strong>Booking note:</strong> All adventure and GM links currently lead to Discord.
+            The website serves as the public front page of the program while Discord remains the
+            main community and coordination hub.
+          </p>
+        </div>
+      </section>
+
+      <section id="current-games" class="content-section">
         <div class="container">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">Our Story</p>
-              <h2>Why Game Master Society Exists</h2>
+              <p class="section-kicker">Adventures</p>
+              <h2>Current Games</h2>
               <p class="section-text">
-                Game Master Society grew out of a shared belief that tabletop games deserve
-                thoughtful facilitation, clear communication, and spaces where players feel welcome.
-                The website serves as the public front door of the program, while Discord remains
-                the living community where games are organized, questions are answered, and tables take shape.
+                Browse the adventures currently available through Game Master Society.
+                Each listing links directly to its Discord channel, where you can learn more,
+                ask questions, and connect with the GM running the table.
               </p>
             </div>
           </div>
 
-          <div class="copy-panel">
-            <p>
-              The goal is simple: make it easier for players to discover great games and for Game Masters
-              to present their work clearly and professionally. Whether someone is brand new to tabletop
-              roleplaying or has been playing for years, the focus is the same: strong tables, better stories,
-              and experiences that people want to come back to.
-            </p>
-          </div>
-        </div>
-      </section>
+          <div class="filters-panel">
+            <div class="filters-grid">
+              <label class="filter-field">
+                <span>Search</span>
+                <input
+                  id="game-search"
+                  type="search"
+                  placeholder="Search by title, GM, system, or description"
+                />
+              </label>
 
-      <section class="content-section alt-section">
-        <div class="container">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">Values</p>
-              <h2>What We Stand For</h2>
+              <label class="filter-field">
+                <span>System</span>
+                <select id="system-filter">
+                  <option value="">All systems</option>
+                </select>
+              </label>
+
+              <label class="filter-field">
+                <span>Status</span>
+                <select id="status-filter">
+                  <option value="">All statuses</option>
+                </select>
+              </label>
+
+              <label class="filter-field">
+                <span>Format</span>
+                <select id="format-filter">
+                  <option value="">All formats</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="filters-actions">
+              <p id="results-summary" class="results-summary">Loading games...</p>
+              <button id="clear-filters" class="button button-secondary" type="button">
+                Clear Filters
+              </button>
             </div>
           </div>
 
-          <div class="values-grid">
-            <article class="value-card">
-              <h3>Welcoming Tables</h3>
-              <p>
-                Players should know what kind of experience they are joining and feel respected
-                when they arrive at the table.
-              </p>
-            </article>
-
-            <article class="value-card">
-              <h3>Professional Game Mastering</h3>
-              <p>
-                Clear communication, thoughtful preparation, and intentional table culture matter.
-              </p>
-            </article>
-
-            <article class="value-card">
-              <h3>Collaborative Storytelling</h3>
-              <p>
-                The best games are built with the players, not just for them.
-              </p>
-            </article>
-
-            <article class="value-card">
-              <h3>Varied Play Styles</h3>
-              <p>
-                Different players want different things. We support a wide range of systems, tones,
-                and adventure formats.
-              </p>
-            </article>
-          </div>
+          <div id="games-grid" class="card-grid card-grid-wide" aria-live="polite"></div>
         </div>
       </section>
 
-      <section class="content-section">
+      <section id="game-masters" class="content-section alt-section">
         <div class="container">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">Play</p>
-              <h2>What We Play</h2>
+              <p class="section-kicker">Roster</p>
+              <h2>Game Masters</h2>
               <p class="section-text">
-                Game Master Society supports a range of systems and styles depending on the GM and
-                the adventure. Some tables lean heroic fantasy. Others dig into horror, mystery,
-                surreal storytelling, tactical combat, or emotionally driven roleplay.
+                Meet the GMs behind the adventures. Each one brings a different style, tone,
+                and approach to the table, making it easier to find the experience that fits you best.
               </p>
             </div>
           </div>
 
-          <div class="values-grid">
-            <article class="value-card">
-              <h3>Fantasy Adventures</h3>
-              <p>Dungeons & Dragons and other fantasy systems for classic quests, strange realms, and party-driven stories.</p>
-            </article>
-
-            <article class="value-card">
-              <h3>Horror & Suspense</h3>
-              <p>Games built around dread, mystery, tension, and the thrill of the unknown.</p>
-            </article>
-
-            <article class="value-card">
-              <h3>Short & Long Formats</h3>
-              <p>One-table introductions, short arcs, and longer campaigns all have a place in the program.</p>
-            </article>
-
-            <article class="value-card">
-              <h3>Different GM Voices</h3>
-              <p>Every GM brings a different tone and approach, giving players real variety in the kinds of stories they can join.</p>
-            </article>
-          </div>
+          <div id="gm-grid" class="gm-grid" aria-live="polite"></div>
         </div>
       </section>
 
-      <section class="content-section alt-section">
+      <section id="how-to-join" class="content-section">
         <div class="container">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">Join</p>
-              <h2>How to Get Started</h2>
+              <p class="section-kicker">Joining</p>
+              <h2>How It Works</h2>
               <p class="section-text">
-                The process is simple. Browse the current games, follow the Discord link for the adventure
-                that interests you, and connect directly with the GM to ask questions and arrange your seat.
+                Getting started is simple. Choose a game, visit its Discord channel, and reach out
+                to the GM for details on seats, questions, and ticketing.
               </p>
             </div>
           </div>
@@ -219,33 +198,48 @@
           <div class="info-grid">
             <article class="info-card">
               <span class="info-number">01</span>
-              <h3>Browse Current Games</h3>
-              <p>See what is active, who is running it, and which systems or styles are available right now.</p>
+              <h3>Choose an adventure</h3>
+              <p>
+                Browse the current lineup and find the story, system, and format that fits the
+                kind of experience you want.
+              </p>
             </article>
 
             <article class="info-card">
               <span class="info-number">02</span>
-              <h3>Join Discord</h3>
-              <p>Discord is the main hub for the community and the place where each game is organized.</p>
+              <h3>Visit the Discord channel</h3>
+              <p>
+                Each game listing links directly to its channel so you can learn more and see
+                where that table is being organized.
+              </p>
             </article>
 
             <article class="info-card">
               <span class="info-number">03</span>
               <h3>Contact the GM</h3>
-              <p>Seats are handled directly by the GM running each adventure.</p>
+              <p>
+                Ask questions, check availability, and arrange your seat directly with the GM
+                running that adventure.
+              </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="content-section">
+      <section id="community-links" class="content-section alt-section">
         <div class="container">
-          <div class="link-panel">
-            <a class="community-link" href="index.html#current-games">
-              <span class="community-link-label">Current Games</span>
-              <span class="community-link-text">Browse active adventures and find your next table.</span>
-            </a>
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Community</p>
+              <h2>Official Links</h2>
+              <p class="section-text">
+                Join the community, follow updates, and help shape future adventures through
+                Discord, Instagram, and the player survey.
+              </p>
+            </div>
+          </div>
 
+          <div class="link-panel">
             <a
               class="community-link"
               href="https://discord.gg/zRsRBBMPQ"
@@ -253,7 +247,17 @@
               rel="noopener noreferrer"
             >
               <span class="community-link-label">Discord</span>
-              <span class="community-link-text">Join the main community hub and connect with Game Masters.</span>
+              <span class="community-link-text">Join the server and explore active adventures.</span>
+            </a>
+
+            <a
+              class="community-link"
+              href="https://www.instagram.com/gamemastersociety?igsh=azZoc2R1cmw4MDA1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="community-link-label">Instagram</span>
+              <span class="community-link-text">Follow Game Master Society for updates and announcements.</span>
             </a>
 
             <a
@@ -263,7 +267,7 @@
               rel="noopener noreferrer"
             >
               <span class="community-link-label">Player Survey</span>
-              <span class="community-link-text">Help shape future adventures and tell us what you want to play.</span>
+              <span class="community-link-text">Tell us what kinds of games you want to see next.</span>
             </a>
           </div>
         </div>
@@ -281,11 +285,108 @@
         </div>
 
         <div class="footer-meta">
-          <p>Discord remains the main community hub for questions, games, and coordination.</p>
-          <p>Use the website to explore what is running and learn more about the program.</p>
+          <p>Seats are arranged directly with the GM running each adventure.</p>
+          <p>Use each game’s Discord channel to ask questions and join the table.</p>
         </div>
       </div>
     </footer>
+  </div>
+
+  <template id="game-card-template">
+    <article class="game-card">
+      <div class="game-card-top">
+        <div class="game-card-heading">
+          <p class="game-subtitle"></p>
+          <h4 class="game-title"></h4>
+        </div>
+        <div class="game-card-badges">
+          <span class="game-status"></span>
+          <span class="game-format"></span>
+        </div>
+      </div>
+
+      <div class="game-meta">
+        <span class="game-system"></span>
+        <span class="game-gm"></span>
+      </div>
+
+      <p class="game-short-description"></p>
+
+      <div class="game-facts"></div>
+      <div class="game-tags"></div>
+
+      <div class="game-card-actions">
+        <button class="button button-small button-secondary game-details-button" type="button">
+          View Details
+        </button>
+        <a class="button button-small button-primary game-link" target="_blank" rel="noopener noreferrer">
+          Inquire in Discord
+        </a>
+      </div>
+    </article>
+  </template>
+
+  <template id="gm-card-template">
+    <article class="gm-card">
+      <h4 class="gm-name"></h4>
+      <p class="gm-role">Game Master</p>
+      <p class="gm-bio"></p>
+      <a class="button button-small button-secondary gm-link" target="_blank" rel="noopener noreferrer">
+        Visit GM Channel
+      </a>
+    </article>
+  </template>
+
+  <div id="game-modal" class="modal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal="true"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" aria-label="Close details" data-close-modal="true">×</button>
+
+      <div class="modal-header">
+        <p id="modal-subtitle" class="modal-subtitle"></p>
+        <h3 id="modal-title" class="modal-title"></h3>
+        <div class="modal-badges">
+          <span id="modal-status" class="game-status"></span>
+          <span id="modal-format" class="game-format"></span>
+        </div>
+      </div>
+
+      <div class="modal-meta">
+        <span id="modal-system" class="game-system"></span>
+        <span id="modal-gm" class="game-gm"></span>
+      </div>
+
+      <div id="modal-description" class="modal-description"></div>
+
+      <div id="modal-facts" class="modal-facts"></div>
+
+      <section id="modal-tags-section" class="modal-section" hidden>
+        <h4>Tags</h4>
+        <div id="modal-tags" class="game-tags"></div>
+      </section>
+
+      <section id="modal-warnings-section" class="modal-section" hidden>
+        <h4>Content Notes</h4>
+        <ul id="modal-warnings" class="modal-list"></ul>
+      </section>
+
+      <section id="modal-safety-section" class="modal-section" hidden>
+        <h4>Safety Tools</h4>
+        <ul id="modal-safety" class="modal-list"></ul>
+      </section>
+
+      <section id="modal-inspirations-section" class="modal-section" hidden>
+        <h4>Inspiration</h4>
+        <ul id="modal-inspirations" class="modal-list"></ul>
+      </section>
+
+      <div class="modal-actions">
+        <a id="modal-discord-link" class="button button-primary" target="_blank" rel="noopener noreferrer">
+          Go to Adventure Channel
+        </a>
+        <button class="button button-secondary" type="button" data-close-modal="true">Close</button>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
