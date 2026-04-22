@@ -81,7 +81,7 @@
                 <li>Short adventures and longer campaigns</li>
                 <li>Different systems, tones, and play styles</li>
                 <li>Direct paths to each game’s Discord channel</li>
-                <li>GMs with distinct strengths and specialties</li>
+                <li>Game Masters with distinct strengths and specialties</li>
               </ul>
             </div>
 
@@ -295,22 +295,32 @@
   <template id="game-card-template">
     <article class="game-card">
       <div class="game-card-top">
-        <span class="game-status"></span>
-        <span class="game-format"></span>
+        <div class="game-card-heading">
+          <p class="game-subtitle"></p>
+          <h4 class="game-title"></h4>
+        </div>
+        <div class="game-card-badges">
+          <span class="game-status"></span>
+          <span class="game-format"></span>
+        </div>
       </div>
-
-      <h4 class="game-title"></h4>
 
       <div class="game-meta">
         <span class="game-system"></span>
         <span class="game-gm"></span>
       </div>
 
-      <p class="game-description"></p>
+      <p class="game-short-description"></p>
+
+      <div class="game-facts"></div>
+      <div class="game-tags"></div>
 
       <div class="game-card-actions">
+        <button class="button button-small button-secondary game-details-button" type="button">
+          View Details
+        </button>
         <a class="button button-small button-primary game-link" target="_blank" rel="noopener noreferrer">
-          View Adventure Channel
+          Inquire in Discord
         </a>
       </div>
     </article>
@@ -326,6 +336,58 @@
       </a>
     </article>
   </template>
+
+  <div id="game-modal" class="modal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal="true"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" aria-label="Close details" data-close-modal="true">×</button>
+
+      <div class="modal-header">
+        <p id="modal-subtitle" class="modal-subtitle"></p>
+        <h3 id="modal-title" class="modal-title"></h3>
+        <div class="modal-badges">
+          <span id="modal-status" class="game-status"></span>
+          <span id="modal-format" class="game-format"></span>
+        </div>
+      </div>
+
+      <div class="modal-meta">
+        <span id="modal-system" class="game-system"></span>
+        <span id="modal-gm" class="game-gm"></span>
+      </div>
+
+      <div id="modal-description" class="modal-description"></div>
+
+      <div id="modal-facts" class="modal-facts"></div>
+
+      <section id="modal-tags-section" class="modal-section" hidden>
+        <h4>Tags</h4>
+        <div id="modal-tags" class="game-tags"></div>
+      </section>
+
+      <section id="modal-warnings-section" class="modal-section" hidden>
+        <h4>Content Notes</h4>
+        <ul id="modal-warnings" class="modal-list"></ul>
+      </section>
+
+      <section id="modal-safety-section" class="modal-section" hidden>
+        <h4>Safety Tools</h4>
+        <ul id="modal-safety" class="modal-list"></ul>
+      </section>
+
+      <section id="modal-inspirations-section" class="modal-section" hidden>
+        <h4>Inspiration</h4>
+        <ul id="modal-inspirations" class="modal-list"></ul>
+      </section>
+
+      <div class="modal-actions">
+        <a id="modal-discord-link" class="button button-primary" target="_blank" rel="noopener noreferrer">
+          Go to Adventure Channel
+        </a>
+        <button class="button button-secondary" type="button" data-close-modal="true">Close</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
