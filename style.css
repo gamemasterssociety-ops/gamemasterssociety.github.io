@@ -52,6 +52,17 @@ a {
   text-decoration: none;
 }
 
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
 .site-shell {
   min-height: 100vh;
 }
@@ -115,7 +126,8 @@ h4,
 .game-format,
 .gm-role,
 .footer-title,
-.results-summary strong {
+.results-summary strong,
+.modal-subtitle {
   font-family: "Cinzel", Georgia, serif;
   letter-spacing: 0.03em;
 }
@@ -163,7 +175,6 @@ h4,
   justify-content: center;
   flex-direction: column;
   gap: 5px;
-  cursor: pointer;
 }
 
 .nav-toggle span {
@@ -176,10 +187,6 @@ h4,
 
 .hero-section {
   padding: 72px 0 36px;
-}
-
-.hero-section-compact {
-  padding-bottom: 24px;
 }
 
 .hero-grid {
@@ -196,9 +203,7 @@ h4,
 .info-card,
 .link-panel,
 .announcement-inner,
-.filters-panel,
-.copy-panel,
-.value-card {
+.filters-panel {
   background: linear-gradient(180deg, rgba(13, 24, 44, 0.94), rgba(8, 17, 31, 0.96));
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
@@ -255,15 +260,16 @@ h2 {
 .section-text,
 .info-card p,
 .community-link-text,
-.game-description,
 .gm-card p,
 .hero-panel-card p,
 .footer-copy,
 .footer-meta p,
-.copy-panel p,
-.value-card p,
 .results-summary,
-.feature-list li {
+.feature-list li,
+.modal-description,
+.modal-list,
+.modal-facts,
+.game-short-description {
   color: var(--muted);
 }
 
@@ -275,7 +281,8 @@ h2 {
 
 .hero-actions,
 .game-card-actions,
-.filters-actions {
+.filters-actions,
+.modal-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -288,7 +295,6 @@ h2 {
 .button {
   appearance: none;
   border: 0;
-  cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -423,7 +429,6 @@ h2 {
   background: rgba(255, 255, 255, 0.04);
   color: var(--text);
   padding: 0 14px;
-  font: inherit;
 }
 
 .filter-field input::placeholder {
@@ -442,8 +447,7 @@ h2 {
 
 .card-grid,
 .gm-grid,
-.info-grid,
-.values-grid {
+.info-grid {
   display: grid;
   gap: 18px;
 }
@@ -460,16 +464,13 @@ h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.info-grid,
-.values-grid {
+.info-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .game-card,
 .gm-card,
-.info-card,
-.copy-panel,
-.value-card {
+.info-card {
   border-radius: var(--radius-lg);
   padding: 22px;
 }
@@ -478,13 +479,33 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  height: 100%;
 }
 
 .game-card-top {
   display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.game-card-heading {
+  min-width: 0;
+}
+
+.game-subtitle {
+  margin: 0 0 6px;
+  color: var(--gold-bright);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.game-card-badges {
+  display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
+  justify-content: flex-end;
+  gap: 8px;
 }
 
 .game-status,
@@ -516,8 +537,8 @@ h2 {
 
 .game-title,
 .gm-name,
-.value-card h3,
-.info-card h3 {
+.info-card h3,
+.modal-title {
   color: var(--text);
 }
 
@@ -544,9 +565,50 @@ h2 {
   color: var(--muted);
 }
 
-.game-description,
+.game-short-description,
 .gm-bio {
   margin: 0;
+}
+
+.game-facts,
+.modal-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fact-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(215, 161, 58, 0.08);
+  border: 1px solid rgba(215, 161, 58, 0.16);
+  color: var(--text);
+  font-size: 0.84rem;
+}
+
+.game-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(215, 161, 58, 0.1);
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.game-card-actions {
+  margin-top: auto;
 }
 
 .gm-card {
@@ -578,24 +640,14 @@ h2 {
   margin: 10px 0 0;
 }
 
-.copy-panel p {
-  margin: 0;
-}
-
-.value-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 10px;
-}
-
-.value-card p {
-  margin: 0;
-}
-
 .link-panel {
   border-radius: var(--radius-xl);
   padding: 20px;
   display: grid;
   gap: 14px;
+  background: linear-gradient(180deg, rgba(13, 24, 44, 0.94), rgba(8, 17, 31, 0.96));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
 }
 
 .community-link {
@@ -667,11 +719,120 @@ h2 {
   background: rgba(255, 255, 255, 0.02);
 }
 
+.modal[hidden] {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1400;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 14, 0.78);
+  backdrop-filter: blur(6px);
+}
+
+.modal-card {
+  position: relative;
+  z-index: 1;
+  width: min(820px, calc(100% - 24px));
+  max-height: calc(100vh - 48px);
+  margin: 24px auto;
+  overflow: auto;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(13, 24, 44, 0.98), rgba(8, 17, 31, 0.99));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  padding: 28px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(215, 161, 58, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--gold-bright);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.modal-header {
+  padding-right: 52px;
+}
+
+.modal-subtitle {
+  margin: 0 0 8px;
+  color: var(--gold-bright);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.modal-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.modal-badges,
+.modal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.modal-badges {
+  margin-top: 16px;
+}
+
+.modal-meta {
+  margin-top: 18px;
+}
+
+.modal-description {
+  margin-top: 22px;
+}
+
+.modal-description p {
+  margin: 0 0 14px;
+}
+
+.modal-section {
+  margin-top: 22px;
+}
+
+.modal-section h4 {
+  margin: 0 0 10px;
+  color: var(--gold-bright);
+  font-size: 1rem;
+}
+
+.modal-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.modal-list li + li {
+  margin-top: 6px;
+}
+
+.modal-actions {
+  margin-top: 24px;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 @media (max-width: 1100px) {
   .hero-grid,
   .gm-grid,
   .info-grid,
-  .values-grid,
   .card-grid-wide {
     grid-template-columns: 1fr;
   }
@@ -741,8 +902,7 @@ h2 {
   .gm-card,
   .info-card,
   .filters-panel,
-  .copy-panel,
-  .value-card {
+  .modal-card {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -750,6 +910,15 @@ h2 {
   .filters-actions {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .game-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .game-card-badges {
+    justify-content: flex-start;
   }
 }
 
@@ -778,7 +947,8 @@ h2 {
 
   .hero-actions,
   .game-card-actions,
-  .filters-actions {
+  .filters-actions,
+  .modal-actions {
     flex-direction: column;
     align-items: stretch;
   }
@@ -792,5 +962,13 @@ h2 {
   .footer-brand {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .modal-card {
+    width: min(100% - 12px, 100%);
+    margin: 6px auto;
+    max-height: calc(100vh - 12px);
+    border-radius: 18px;
+    padding-top: 52px;
   }
 }
