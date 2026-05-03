@@ -102,31 +102,31 @@
       ],
       "discord_link": "https://discordapp.com/channels/1067877863438692472/1439653284288659456"
     },
-{
-  "title": "The Fall of Itzli",
-  "gm": "Michelle",
-  "system": "Call of Cthulhu",
-  "status": "recruiting",
-  "format": "long",
-  "short_description": "A New England mystery of earthquakes, disappearances, and ritual killings. 2 seats claimed, 4 still open.",
-  "description": "A New England mystery where strange disasters and quiet denial hint at deeper horrors moving beneath the surface.",
-  "full_description": "December 13, 1926. 1:30 AM. Holmouth, New Hampshire.\n\nShortly after 1:30 AM a 4.5 earthquake was felt directly northwest of Holmouth. Minor damage was reported from local homes and businesses. Residents later claimed to see smoke and a large black shadow northwest of town. Further investigation revealed The Holmouth Institute in flames. Four deceased patients were found on the grounds while the fire brigade attempted to extinguish the blaze. The historic mausoleum on the grounds was also partially destroyed.\n\nThe quiet towns of New Hampshire have gone through a few rough years. Mysterious disappearances, ritual killings, unexplained earthquakes. The residents seem to have become accustomed to these kinds of events.\n\nNo one thinks these events are related. Unfortunate circumstances, that is what people say. But work is being done in the shadows. There may be more to these stories than meets the eye.\n\nWill anyone investigate further?",
-  "price_per_session": 25,
-  "players_max": 6,
-  "seats_available": 4,
-  "session_length_hours": 3,
-  "schedule": "TBD, Sundays, Saturdays, or Thursdays",
-  "experience_level": "All welcome",
-  "tags": [
-    "horror",
-    "mystery",
-    "investigation",
-    "new england",
-    "cosmic horror",
-    "4 seats open"
-  ],
-  "discord_link": "https://discordapp.com/channels/1067877863438692472/1491206046025257030"
-},
+    {
+      "title": "The Fall of Itzli",
+      "gm": "Michelle",
+      "system": "Call of Cthulhu",
+      "status": "recruiting",
+      "format": "long",
+      "short_description": "A New England mystery of earthquakes, disappearances, and ritual killings. 2 seats claimed, 4 still open.",
+      "description": "A New England mystery where strange disasters and quiet denial hint at deeper horrors moving beneath the surface.",
+      "full_description": "December 13, 1926. 1:30 AM. Holmouth, New Hampshire.\n\nShortly after 1:30 AM a 4.5 earthquake was felt directly northwest of Holmouth. Minor damage was reported from local homes and businesses. Residents later claimed to see smoke and a large black shadow northwest of town. Further investigation revealed The Holmouth Institute in flames. Four deceased patients were found on the grounds while the fire brigade attempted to extinguish the blaze. The historic mausoleum on the grounds was also partially destroyed.\n\nThe quiet towns of New Hampshire have gone through a few rough years. Mysterious disappearances, ritual killings, unexplained earthquakes. The residents seem to have become accustomed to these kinds of events.\n\nNo one thinks these events are related. Unfortunate circumstances, that is what people say. But work is being done in the shadows. There may be more to these stories than meets the eye.\n\nWill anyone investigate further?",
+      "price_per_session": 25,
+      "players_max": 6,
+      "seats_available": 4,
+      "session_length_hours": 3,
+      "schedule": "TBD, Sundays, Saturdays, or Thursdays",
+      "experience_level": "All welcome",
+      "tags": [
+        "horror",
+        "mystery",
+        "investigation",
+        "new england",
+        "cosmic horror",
+        "4 seats open"
+      ],
+      "discord_link": "https://discordapp.com/channels/1067877863438692472/1491206046025257030"
+    },
     {
       "title": "Strixhaven: Freshman Year",
       "subtitle": "Curriculum of Chaos",
@@ -136,7 +136,7 @@
       "format": "long",
       "short_description": "A beginner-friendly magic school adventure where students uncover mysteries beneath Strixhaven University.",
       "description": "A D&D 5e magic school adventure set at Strixhaven University, launching in late May.",
-      "full_description": "Dear Prospective Student,\n\nIt is our pleasure to announce your formal acceptance to the multiverse's premier magical university, Strixhaven. Here, you will join one of five magical colleges in your pursuit of knowledge and power: Lorehold, Prismari, Quandrix, Witherbloom, or Silverquill.\n\nWhether you seek to unravel the mysteries of The Weave, wield unimaginable cosmic power, or simply get better at talking to ghosts, we can assure you that your time here will be nothing short of inspirational. Please note that Strixhaven University accepts no liability for student death or dismemberment due to eldritch explosions, mauling by magically augmented beasts, or abduction by sinister secret societies.\n\nThis adventure, ranging levels 2 through 4, covers freshman year of a modified version of Curriculum of Chaos. Players begin to navigate academic life while uncovering the larger mystery beneath the surface of their magical studies at Strixhaven.\n\nStrixhaven offers a fun magic-school D&D experience that is beginner friendly while still offering plenty for seasoned players to enjoy. This campaign uses the 2014 D&D 5e ruleset.",
+      "full_description": "Dear Prospective Student,\n\nIt is our pleasure to announce your formal acceptance to the multiverse's premier magical university, Strixhaven. Here, you will join one of five magical colleges in your pursuit of knowledge and power: Lorehold, Prismari, Quandrix, Witherbloom, or Silverquill.\n\nWhether you seek to unravel the mysteries of The Weave, wield unimaginable cosmic power, or simply get better at talking to ghosts, we can assure you that your time here will be nothing short of inspirational. Please note that Strixhaven University accepts no liability for student death or dismemberment due to eldritch explosions, mauling by magically augmented beasts, or abduction by sinister secret societies.\n\nOnce more, congratulations on your acceptance. We look forward to your arrival. Strixhaven, Arcavios awaits.\n\nThis adventure covers freshman year of a modified version of Curriculum of Chaos. Players begin to navigate academic life while uncovering the larger mystery beneath the surface of their magical studies at Strixhaven.\n\nStrixhaven offers a fun magic-school D&D experience that is beginner friendly while still offering plenty for seasoned players to enjoy.",
       "price_per_session": 25,
       "players_max": 5,
       "sessions_min": 6,
@@ -151,6 +151,36 @@
         "student life"
       ],
       "discord_link": "https://discordapp.com/channels/1067877863438692472/1457745015752097884"
+    },
+    {
+      "title": "Twilight: 1984 - Survival in Summerville",
+      "gm": "Adam",
+      "system": "Twilight: 2000 4e",
+      "status": "upcoming",
+      "format": "long",
+      "short_description": "Small town life collapses after invasion in a Cold War survival story of sacrifice, trust, and resistance.",
+      "description": "The year is 1984 and the Cold War has turned hot. Suddenly, small town life is turned upside down in the aftermath of invasion.",
+      "full_description": "The year is 1984 and the Cold War has turned hot. Suddenly, small town life is turned upside down in the aftermath of invasion.\n\nThis is a story of survival and sacrifice in a narrative storytelling game with a sprinkle of base building and small unit tactics, inspired by Red Dawn, Jericho, and Alas, Babylon.\n\nYou will play as one of Summerville’s townsfolk. As the world collapses around you, survival will depend on more than stockpiled cans and loaded shotguns. You will need to rally neighbors, forge alliances, and decide who can be trusted.\n\nYour actions will determine the fate of Summerville. Good luck, you are on your own.",
+      "price_per_session": 20,
+      "players_max": 6,
+      "sessions_min": 8,
+      "sessions_max": 10,
+      "schedule": "Every other Wednesday, 6–9 PM, launching early June",
+      "experience_level": "Beginner friendly",
+      "tags": [
+        "survival",
+        "cold war",
+        "post-invasion",
+        "base building",
+        "small unit tactics",
+        "beginner friendly"
+      ],
+      "inspirations": [
+        "Red Dawn",
+        "Jericho",
+        "Alas, Babylon"
+      ],
+      "discord_link": "https://discordapp.com/channels/1067877863438692472/1494739685879320667"
     }
   ]
 }
