@@ -1149,3 +1149,89 @@ body.modal-open { overflow: hidden; }
     box-shadow: inset 3px 0 var(--rust);
   }
 }
+
+
+/* Player testimonials */
+.home-testimonials { background: #f1e8d8; border-block: 1px solid var(--line); }
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.testimonial-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.testimonial-card {
+  position: relative;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  margin: 0;
+  padding: 26px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: 0 5px 16px rgba(45,39,29,.04);
+}
+.testimonial-mark {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: rgba(164,73,50,.13);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.testimonial-card blockquote {
+  position: relative;
+  margin: 0;
+  color: var(--ink);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+.testimonial-card blockquote p { margin: 0; }
+.testimonial-card figcaption {
+  display: grid;
+  gap: 2px;
+  margin-top: auto;
+  padding-top: 22px;
+}
+.testimonial-card figcaption strong {
+  color: var(--forest);
+  font-size: .9rem;
+}
+.testimonial-card figcaption span {
+  color: var(--muted);
+  font-size: .78rem;
+}
+.testimonial-note {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: .76rem;
+}
+.business-testimonials {
+  color: #fff;
+  background:
+    radial-gradient(circle at 90% 14%, rgba(232,199,128,.15), transparent 29%),
+    var(--forest-dark);
+}
+.business-testimonials .section-kicker,
+.business-testimonials h2 { color: #fff; }
+.business-testimonials .section-text { color: #d5dfd9; }
+.business-testimonials .testimonial-card {
+  background: rgba(255,255,255,.07);
+  border-color: rgba(255,255,255,.15);
+  box-shadow: none;
+}
+.business-testimonials .testimonial-mark { color: rgba(232,199,128,.16); }
+.business-testimonials .testimonial-card blockquote { color: #fff; }
+.business-testimonials .testimonial-card figcaption strong { color: #e8c780; }
+.business-testimonials .testimonial-card figcaption span,
+.business-testimonials .testimonial-note { color: #cdd8d1; }
+@media (max-width: 900px) {
+  .testimonial-grid,
+  .testimonial-grid-two { grid-template-columns: 1fr; }
+}
