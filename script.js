@@ -3,16 +3,68 @@ document.addEventListener("DOMContentLoaded", async () => {
   const siteNav = document.querySelector(".site-nav");
 
   if (navToggle && siteNav) {
+    const menuGroups = [...siteNav.querySelectorAll(".nav-group")];
+
+    const closeSubmenus = (except = null) => {
+      menuGroups.forEach((group) => {
+        if (group === except) return;
+        group.classList.remove("is-open");
+        group.querySelector(".nav-menu-toggle")?.setAttribute("aria-expanded", "false");
+      });
+    };
+
+    const closeNavigation = () => {
+      siteNav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      closeSubmenus();
+    };
+
     navToggle.addEventListener("click", () => {
       const isOpen = siteNav.classList.toggle("is-open");
       navToggle.setAttribute("aria-expanded", String(isOpen));
+      if (!isOpen) closeSubmenus();
+    });
+
+    menuGroups.forEach((group) => {
+      const button = group.querySelector(".nav-menu-toggle");
+      if (!button) return;
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        const willOpen = !group.classList.contains("is-open");
+        closeSubmenus(group);
+        group.classList.toggle("is-open", willOpen);
+        button.setAttribute("aria-expanded", String(willOpen));
+      });
     });
 
     siteNav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
+      link.addEventListener("click", closeNavigation);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!siteNav.contains(event.target) && event.target !== navToggle) {
+        closeSubmenus();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      const hadOpenSubmenu = menuGroups.some((group) => group.classList.contains("is-open"));
+      closeSubmenus();
+      if (window.matchMedia("(max-width: 900px)").matches && siteNav.classList.contains("is-open")) {
+        closeNavigation();
+        navToggle.focus();
+      } else if (hadOpenSubmenu) {
+        if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.matchMedia("(min-width: 901px)").matches) {
         siteNav.classList.remove("is-open");
         navToggle.setAttribute("aria-expanded", "false");
-      });
+        closeSubmenus();
+      }
     });
   }
 
