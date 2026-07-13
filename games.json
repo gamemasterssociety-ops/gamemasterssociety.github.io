@@ -205,6 +205,42 @@
         "roleplay"
       ],
       "discord_link": "https://discord.com/channels/1067877863438692472/1505596378376835253"
+    },
+    {
+      "title": "Public Access",
+      "subtitle": "Welcome to Deep Lake",
+      "gm": "James",
+      "system": "Public Access",
+      "status": "recruiting",
+      "format": "long",
+      "short_description": "Investigate strange mysteries in 2004 Deep Lake, where a vanished public-access station still casts a long and terrifying shadow.",
+      "description": "A nostalgic, weird, and terrifying mystery game inspired by early internet horror, urban legends, analog horror, and found footage.",
+      "full_description": "In 2004, a group of residents known as the Deep Lake Latchkeys find themselves investigating strange mysteries in and around Deep Lake, New Mexico.\n\nIn the 1980s and early 1990s, Deep Lake was home to a notorious public-access television station called TV Odyssey. The station literally disappeared, and its history and fate remain the subject of speculation in certain corners of the internet. As the Latchkeys conduct their investigations, they become increasingly aware of the central role TV Odyssey plays in everything happening around them and must face whatever terrible truth lies at the heart of the infamous station.\n\nPublic Access takes inspiration from early internet horror stories, creepypasta tales, urban legends, analog and found-footage horror, synthwave and vaporwave music, and American pop culture from the 1980s and 1990s.\n\nThe characters will investigate local mysteries to get closer to the truth of what happened to TV Odyssey while the players uncover their characters’ pasts and build a vivid, shared version of Deep Lake. The game is nostalgic, weird, and terrifying. Everything should feel just a little bit wrong and a little bit off. Humor is welcome, especially early on, but the story will become stranger and scarier as it progresses.\n\nNo prior experience with Public Access or its related game systems is required.",
+      "price_per_session": 20,
+      "players_max": 4,
+      "seats_available": 4,
+      "session_length_hours": 4,
+      "schedule": "Thursdays, 6–10 PM at The Portal in Manchester, CT",
+      "experience_level": "Beginner friendly",
+      "tags": [
+        "horror",
+        "mystery",
+        "investigation",
+        "analog horror",
+        "early internet",
+        "nostalgia",
+        "beginner friendly",
+        "4 seats open"
+      ],
+      "inspirations": [
+        "Early internet horror",
+        "Creepypasta",
+        "Urban legends",
+        "Analog horror",
+        "Found footage",
+        "1980s and 1990s pop culture"
+      ],
+      "discord_link": "https://discord.com/channels/1067877863438692472/1525629399091773583"
     }
   ]
 }
