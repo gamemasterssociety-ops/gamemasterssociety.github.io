@@ -888,3 +888,97 @@ body.modal-open { overflow: hidden; }
   .survey-demand-panel { padding: 22px; }
   .survey-demand-heading .button { width: 100%; }
 }
+
+/* Past adventures archive */
+.archive-hero {
+  background:
+    radial-gradient(circle at 88% 15%, rgba(164,73,50,.12), transparent 28%),
+    linear-gradient(135deg, #f7f3eb 0%, #eee8dc 100%);
+}
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.archive-grid > .empty-state { grid-column: 1 / -1; }
+.archive-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  padding: 23px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: 0 5px 16px rgba(45,39,29,.04);
+}
+.archive-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 13px;
+}
+.archive-badge {
+  display: inline-flex;
+  min-height: 26px;
+  align-items: center;
+  padding: 0 9px;
+  color: #7c3e2d;
+  background: #f3e5dd;
+  border-radius: 999px;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.archive-badge-muted { color: #625c52; background: #eee9df; }
+.archive-card h3 { font-size: 1.4rem; }
+.archive-facts { margin: 17px 0 0; }
+.archive-facts div {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 10px;
+  padding: 7px 0;
+  border-top: 1px solid var(--line);
+}
+.archive-facts dt {
+  color: var(--muted);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.archive-facts dd { margin: 0; color: var(--ink); font-size: .87rem; font-weight: 650; }
+.archive-card-summary { margin: 17px 0 0; color: var(--muted); }
+.archive-card-details {
+  margin: 11px 0 0;
+  color: #72766f;
+  font-size: .86rem;
+}
+.system-expectation {
+  margin-top: auto;
+  padding-top: 18px;
+}
+.system-expectation summary {
+  padding: 11px 13px;
+  color: var(--forest);
+  background: #e5efe8;
+  border-radius: 8px;
+  font-size: .82rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.system-expectation p {
+  margin: 10px 2px 0;
+  color: var(--muted);
+  font-size: .86rem;
+}
+.archive-cta-section { border-bottom: 0; }
+@media (max-width: 1050px) {
+  .archive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .archive-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 430px) {
+  .archive-facts div { grid-template-columns: 1fr; gap: 2px; }
+}
