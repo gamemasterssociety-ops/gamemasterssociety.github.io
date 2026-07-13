@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore archived tabletop adventures run by Game Master Society-affiliated Game Masters and preserved in the local campaign archive." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Game Master Society" />
+  <meta property="og:title" content="Past Adventures | Game Master Society" />
+  <meta property="og:description" content="Browse dozens of archived tabletop adventures, systems, and campaign ideas from the local GMS community." />
+  <meta property="og:url" content="https://gamemastersociety.com/past-games.html" />
+  <meta property="og:image" content="https://gamemastersociety.com/gms-logo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://gamemastersociety.com/past-games.html" />
+  <link rel="icon" href="logo.webp" type="image/webp" />
+  <meta name="theme-color" content="#24493b" />
+  <title>Past Adventures | Game Master Society</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=20260713-5" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Past Adventures",
+    "description": "An archive of tabletop roleplaying games preserved by the Game Master Society community.",
+    "url": "https://gamemastersociety.com/past-games.html",
+    "isPartOf": {"@type": "WebSite", "name": "Game Master Society", "url": "https://gamemastersociety.com/"}
+  }
+  </script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-lockup" aria-label="Game Master Society home">
+          <img src="logo.webp" alt="Game Master Society logo" class="brand-logo" />
+          <div class="brand-wordmark">
+            <span class="brand-name">Game Master Society</span>
+            <span class="brand-tagline">Professional game masters. Better stories.</span>
+          </div>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="index.html#current-games">Find a Game</a>
+          <a href="systems.html">Systems</a>
+          <a href="past-games.html" aria-current="page">Past Adventures</a>
+          <a href="new-players.html">New Players</a>
+          <a href="partnerships.html">Partner With GMS</a>
+          <a href="standards.html">Standards</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section page-hero archive-hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Campaign archive</p>
+            <h1>Past adventures, preserved.</h1>
+            <p class="hero-text">Explore the range of stories and game systems that local Game Masters have brought to the table, from short mysteries to long-running campaigns.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#archive">Browse the Archive</a>
+              <a class="button button-secondary" href="index.html#current-games">Find a Current Game</a>
+            </div>
+          </div>
+          <aside class="hero-panel">
+            <div class="hero-panel-card">
+              <span class="panel-label">What “archived” means</span>
+              <p>These games are no longer listed as current or recruiting. An archived listing does not necessarily mean every planned session was completed.</p>
+            </div>
+            <div class="hero-panel-card">
+              <span class="panel-label">Archive in progress</span>
+              <p>Some older records contain only a title or system. Those entries stay brief until more verified details are available.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="archive" class="content-section archive-section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">The stories behind the tables</p>
+              <h2>Campaign archive</h2>
+              <p class="section-text">Search by title, system, Game Master, or year. Entries based only on surviving channel names are labeled carefully instead of filling gaps with guesses.</p>
+            </div>
+          </div>
+
+          <div class="filters-panel archive-filters">
+            <div class="filters-grid">
+              <label class="filter-field">
+                <span>Search</span>
+                <input id="archive-search" type="search" placeholder="Search titles, systems, GMs, or descriptions" />
+              </label>
+              <label class="filter-field">
+                <span>System</span>
+                <select id="archive-system"><option value="">All systems</option></select>
+              </label>
+              <label class="filter-field">
+                <span>Game Master</span>
+                <select id="archive-gm"><option value="">All recorded GMs</option></select>
+              </label>
+              <label class="filter-field">
+                <span>Year</span>
+                <select id="archive-year"><option value="">All recorded years</option></select>
+              </label>
+            </div>
+            <div class="filters-actions">
+              <p id="archive-summary" class="results-summary" aria-live="polite">Loading past adventures…</p>
+              <button id="archive-clear" class="button button-secondary" type="button">Clear Filters</button>
+            </div>
+          </div>
+
+          <div id="archive-grid" class="archive-grid" aria-live="polite"></div>
+          <noscript><p class="empty-state">JavaScript is required to load the searchable campaign archive.</p></noscript>
+        </div>
+      </section>
+
+      <section class="content-section alt-section archive-cta-section">
+        <div class="container gateway-panel">
+          <div>
+            <p class="section-kicker">What comes next</p>
+            <h2>Looking for a game you can join now?</h2>
+            <p class="section-text">The archive shows what local Game Masters have run before. Current listings show what is recruiting or already underway today.</p>
+          </div>
+          <div class="gateway-actions">
+            <a class="button button-primary" href="index.html#current-games">See Current Games</a>
+            <a class="button button-secondary" href="https://discord.gg/SBT6Bnp6hb" target="_blank" rel="noopener noreferrer">Join the Discord</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="logo.webp" alt="" class="footer-logo" />
+          <div><p class="footer-title">Game Master Society</p><p class="footer-copy">Professional game masters. Better stories.</p></div>
+        </div>
+        <div class="footer-meta">
+          <p>General inquiries: <a href="mailto:gamemasterssociety@gmail.com">gamemasterssociety@gmail.com</a></p>
+          <p>Manchester, Connecticut</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js?v=20260712-3"></script>
+  <script src="past-games.js?v=20260713-1"></script>
+</body>
+</html>
