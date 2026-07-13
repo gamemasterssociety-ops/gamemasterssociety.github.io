@@ -80,6 +80,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     return map[value] || titleCase(value);
   };
 
+  const gamePageUrl = (title) => {
+    const slug = String(title || "")
+      .toLowerCase()
+      .replace(/&/g, "and")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+    return `game-${slug}.html`;
+  };
+
   const pluralize = (count, singular, plural) => {
     return `${count} ${count === 1 ? singular : plural}`;
   };
@@ -341,7 +350,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
 
       if (detailsButton) {
-        detailsButton.addEventListener("click", () => openModal(game));
+        detailsButton.textContent = "View Game";
+        detailsButton.addEventListener("click", () => {
+          window.location.href = gamePageUrl(game.title);
+        });
       }
 
       if (link) {
