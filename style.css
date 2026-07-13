@@ -321,3 +321,14 @@ body.modal-open { overflow: hidden; }
   .gateway-panel,.detail-main { padding: 22px; }
   .gateway-actions { width: 100%; flex-direction: column; }
 }
+
+/* Places We Play */
+.venue-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+.venue-card { overflow: hidden; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); }
+.venue-card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+.venue-card-content { padding: 22px; }
+.venue-card-content .section-kicker { margin-bottom: 6px; }
+.venue-card-content h3 { font-size: 1.35rem; }
+.venue-card-content p { color: var(--muted); margin: 9px 0 0; }
+.venue-card-content a { display: inline-block; margin-top: 16px; color: var(--forest); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 900px) { .venue-grid { grid-template-columns: 1fr; } }
