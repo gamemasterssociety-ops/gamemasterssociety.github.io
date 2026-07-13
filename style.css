@@ -1235,3 +1235,109 @@ body.modal-open { overflow: hidden; }
   .testimonial-grid,
   .testimonial-grid-two { grid-template-columns: 1fr; }
 }
+
+
+/* Real table photography */
+.hero-photo-card,
+.photo-feature-card {
+  margin: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.hero-photo-card {
+  margin-bottom: 18px;
+}
+.hero-photo-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-photo-card--portrait img {
+  object-position: center 38%;
+}
+.hero-photo-card figcaption,
+.photo-feature-card figcaption {
+  color: var(--forest-dark);
+  background: var(--surface);
+}
+.hero-photo-card figcaption {
+  padding: 14px 16px 16px;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.hero-photo-card figcaption span,
+.photo-feature-card figcaption span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--rust);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.photo-feature-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr);
+  margin: 4px 0 32px;
+}
+.photo-feature-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+.photo-feature-card figcaption {
+  padding: clamp(24px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid var(--line);
+}
+.photo-feature-card figcaption strong {
+  color: var(--forest-dark);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.3rem, 2.3vw, 2rem);
+  line-height: 1.16;
+}
+.photo-feature-about img {
+  object-position: center 40%;
+}
+.photo-feature-new-player img {
+  object-position: center 24%;
+}
+.photo-feature-systems img {
+  object-position: center 52%;
+}
+.photo-feature-archive img {
+  object-position: center;
+}
+.prose-main > .photo-feature-card {
+  grid-template-columns: 1fr;
+  margin-top: 0;
+}
+.prose-main > .photo-feature-card img {
+  height: 300px;
+}
+.prose-main > .photo-feature-card figcaption {
+  border-left: 0;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 760px) {
+  .photo-feature-card {
+    grid-template-columns: 1fr;
+  }
+  .photo-feature-card img,
+  .prose-main > .photo-feature-card img {
+    height: 260px;
+  }
+  .photo-feature-card figcaption {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}
