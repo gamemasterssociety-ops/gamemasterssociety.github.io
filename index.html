@@ -31,6 +31,10 @@
   <meta name="twitter:image" content="https://gamemastersociety.com/gms-logo.jpg" />
   <meta name="twitter:image:alt" content="Game Master Society logo" />
 
+  <link rel="canonical" href="https://gamemastersociety.com/" />
+  <link rel="icon" href="logo.webp" type="image/webp" />
+  <meta name="theme-color" content="#24493b" />
+
   <title>Game Master Society</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,6 +44,34 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="style.css?v=20260712-2" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://gamemastersociety.com/#organization",
+    "name": "Game Master Society",
+    "url": "https://gamemastersociety.com/",
+    "logo": "https://gamemastersociety.com/logo.webp",
+    "email": "gamemasterssociety@gmail.com",
+    "description": "An independent tabletop roleplaying organization helping players find welcoming games run by skilled local Game Masters in Manchester, Connecticut.",
+    "areaServed": {
+      "@type": "City",
+      "name": "Manchester",
+      "addressRegion": "CT"
+    },
+    "founder": {"@type": "Person", "name": "John Dalterio"},
+    "employee": {"@type": "Person", "name": "Mike Castro", "jobTitle": "Guild Master"},
+    "sameAs": [
+      "https://www.instagram.com/gamemastersociety",
+      "https://discord.gg/zRsRBBMPQ"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "gamemasterssociety@gmail.com",
+      "contactType": "general inquiries"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -67,10 +99,11 @@
         </button>
 
         <nav id="site-nav" class="site-nav" aria-label="Primary">
-          <a href="index.html#current-games">Current Games</a>
+          <a href="index.html#current-games">Find a Game</a>
+          <a href="new-players.html">New Players</a>
           <a href="index.html#game-masters">Game Masters</a>
+          <a href="standards.html">Standards</a>
           <a href="about.html">About</a>
-          <a href="index.html#community-links">Join</a>
         </nav>
       </div>
     </header>
@@ -127,6 +160,23 @@
             <strong>Looking for a seat?</strong> Recruiting games appear first. Open a listing for full
             details, then visit its Discord channel to connect with the Game Master.
           </p>
+        </div>
+      </section>
+
+      <section class="content-section gateway-section">
+        <div class="container gateway-panel">
+          <div>
+            <p class="section-kicker">New Player Gateway</p>
+            <h2>Your first game starts here.</h2>
+            <p class="section-text">
+              You do not need experience, books, dice, or a prepared character to begin. Learn how
+              listings work, what to expect at the table, and how to choose a game that fits you.
+            </p>
+          </div>
+          <div class="gateway-actions">
+            <a class="button button-primary" href="new-players.html">Start Here</a>
+            <a class="button button-secondary" href="index.html#current-games">See Current Games</a>
+          </div>
         </div>
       </section>
 
