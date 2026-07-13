@@ -675,3 +675,53 @@ body.modal-open { overflow: hidden; }
   .form-span { grid-column: auto; }
   .inquiry-form { padding: 21px; }
 }
+
+
+/* Partnership discovery and sharing */
+.site-nav a[aria-current="page"] {
+  color: var(--rust);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
+.partnership-promo-section { padding-top: 0; }
+.partnership-promo-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.partnership-promo-copy {
+  align-self: center;
+  padding: clamp(28px, 5vw, 54px);
+}
+.partnership-promo-copy h2 { max-width: 13ch; }
+.partnership-promo-copy > p:not(.section-kicker) {
+  max-width: 58ch;
+  margin: 15px 0 0;
+  color: var(--muted);
+}
+.partnership-promo-card > img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+.share-status {
+  min-height: 1.4em;
+  margin: 10px 0 0;
+  color: var(--forest);
+  font-size: .88rem;
+  font-weight: 700;
+}
+@media (max-width: 900px) {
+  .partnership-promo-card { grid-template-columns: 1fr; }
+  .partnership-promo-card > img { min-height: 260px; max-height: 420px; }
+}
+@media (max-width: 620px) {
+  .partnership-promo-copy { padding: 25px 21px; }
+  .partnership-promo-card > img { min-height: 220px; }
+}
