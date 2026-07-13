@@ -410,7 +410,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     const gamesData = await gamesResponse.json();
     const gmsData = await gmsResponse.json();
 
-    const allGames = Array.isArray(gamesData.games) ? gamesData.games : [];
+    const allGames = Array.isArray(gamesData.games)
+      ? [...gamesData.games].sort((a, b) => {
+          const priority = { recruiting: 0, upcoming: 1, running: 2, full: 3, archived: 4 };
+          return (priority[a.status] ?? 5) - (priority[b.status] ?? 5);
+        })
+      : [];
     const allGms = Array.isArray(gmsData.gms) ? gmsData.gms : [];
 
     renderGMCards(allGms);
