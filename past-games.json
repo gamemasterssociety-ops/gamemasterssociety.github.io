@@ -267,9 +267,12 @@
     },
     {
       "title": "Artifacts of the Aether",
-      "system": "System not publicly recorded",
-      "format": "Series",
-      "summary": "A past adventure series preserved in the campaign archive; its rules system and full premise are still being documented."
+      "system": "D&D (edition not recorded)",
+      "format": "Standalone one-shot series",
+      "summary": "A non-linear series of standalone fantasy adventures, including The Curse of Wardenwood and The Heist of Promised Power.",
+      "gm": "Jess",
+      "year": 2023,
+      "details": "The Curse of Wardenwood sent level 4 characters to investigate disappearing villagers and a legendary beast. The archived event ran for about 4.5 hours with room for six players; no previous installment was required."
     },
     {
       "title": "Signals Errant",
@@ -294,7 +297,11 @@
     {
       "title": "The Sunless Citadel",
       "system": "D&D 5e",
-      "summary": "A classic dungeon adventure featuring a ruined fortress, rival factions, strange creatures, and mysteries below the surface."
+      "summary": "A classic dungeon adventure featuring a ruined fortress, rival factions, strange creatures, and mysteries below the surface.",
+      "gm": "Mike",
+      "year": 2023,
+      "format": "3–4-session adventure",
+      "details": "The archived listing planned three-hour Tuesday evening sessions for up to six players and welcomed new and intermediate D&D 5e players."
     },
     {
       "title": "Dawn Beyond the Pyramid",
