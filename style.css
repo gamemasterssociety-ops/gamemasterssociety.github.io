@@ -982,3 +982,170 @@ body.modal-open { overflow: hidden; }
 @media (max-width: 430px) {
   .archive-facts div { grid-template-columns: 1fr; gap: 2px; }
 }
+
+/* Primary navigation redesign */
+.site-nav {
+  gap: 7px;
+}
+.site-nav > a,
+.nav-menu-toggle {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  color: #3f463f;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  font-size: .88rem;
+  font-weight: 750;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.site-nav > a:hover,
+.site-nav > a:focus-visible,
+.nav-menu-toggle:hover,
+.nav-menu-toggle:focus-visible {
+  color: var(--rust);
+  background: rgba(164,73,50,.07);
+  outline: none;
+}
+.nav-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav-menu-toggle { gap: 7px; cursor: pointer; }
+.nav-caret {
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform .16s ease;
+}
+.nav-group:hover .nav-caret,
+.nav-group:focus-within .nav-caret,
+.nav-group.is-open .nav-caret {
+  transform: translateY(2px) rotate(225deg);
+}
+.nav-submenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 1100;
+  display: grid;
+  min-width: 230px;
+  padding: 7px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-5px);
+  transition: opacity .15s ease, transform .15s ease, visibility .15s ease;
+}
+.nav-submenu::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 100%;
+  height: 9px;
+}
+.nav-group:hover > .nav-submenu,
+.nav-group:focus-within > .nav-submenu,
+.nav-group.is-open > .nav-submenu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.nav-submenu a {
+  padding: 11px 12px;
+  color: #3f463f;
+  border-radius: 7px;
+  font-size: .88rem;
+  font-weight: 700;
+}
+.nav-submenu a:hover,
+.nav-submenu a:focus-visible {
+  color: var(--rust);
+  background: #f4eee4;
+  outline: none;
+}
+.site-nav > a[aria-current="page"],
+.nav-group:has(a[aria-current="page"]) > .nav-menu-toggle {
+  color: var(--rust);
+  background: rgba(164,73,50,.08);
+  text-decoration: none;
+  box-shadow: inset 0 -2px var(--rust);
+}
+.nav-submenu a[aria-current="page"] {
+  color: var(--rust);
+  background: #f3e5dd;
+  text-decoration: none;
+}
+@media (max-width: 1120px) {
+  .site-nav { gap: 3px; }
+  .site-nav > a,
+  .nav-menu-toggle { padding-inline: 9px; font-size: .82rem; }
+}
+@media (max-width: 900px) {
+  .brand-tagline { display: none; }
+  .nav-toggle { display: inline-flex; }
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 7px);
+    left: 12px;
+    right: 12px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    max-height: calc(100vh - 92px);
+    overflow-y: auto;
+    padding: 8px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+  .site-nav.is-open { display: flex; }
+  .site-nav > a,
+  .nav-menu-toggle {
+    width: 100%;
+    min-height: 46px;
+    justify-content: space-between;
+    padding: 0 13px;
+    font-size: .92rem;
+  }
+  .nav-group { display: block; width: 100%; }
+  .nav-submenu,
+  .nav-group:hover > .nav-submenu,
+  .nav-group:focus-within > .nav-submenu {
+    position: static;
+    display: none;
+    min-width: 0;
+    margin: 2px 0 5px;
+    padding: 4px 4px 4px 14px;
+    background: #f5f0e7;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+  }
+  .nav-group.is-open > .nav-submenu { display: grid; }
+  .nav-submenu::before { display: none; }
+  .nav-submenu a { padding: 11px 12px; }
+  .site-nav > a[aria-current="page"],
+  .nav-group:has(a[aria-current="page"]) > .nav-menu-toggle {
+    box-shadow: inset 3px 0 var(--rust);
+  }
+}
