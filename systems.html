@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore the tabletop RPG systems used in current Game Master Society games, including Dungeons & Dragons, Call of Cthulhu, Twilight: 2000, and Public Access." />
+  <meta name="description" content="Explore tabletop RPG systems currently represented in Game Master Society games and systems requested by the local player community." />
   <link rel="canonical" href="https://gamemastersociety.com/systems.html" />
   <link rel="icon" href="logo.webp" type="image/webp" />
   <meta name="theme-color" content="#24493b" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Game Master Society" />
   <meta property="og:title" content="Games & Systems | Game Master Society" />
-  <meta property="og:description" content="Learn what each tabletop RPG system feels like before choosing your next GMS game." />
+  <meta property="og:description" content="Learn what different tabletop RPG systems feel like and find the style of game that interests you." />
   <meta property="og:url" content="https://gamemastersociety.com/systems.html" />
   <meta property="og:image" content="https://gamemastersociety.com/gms-logo.jpg" />
   <title>Games & Systems | Game Master Society</title>
@@ -57,96 +57,62 @@
         <div class="container">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">Current Systems</p>
+              <p class="section-kicker">Explore the possibilities</p>
               <h2>What to expect at the table</h2>
-              <p class="section-text">The Game Master and adventure still shape the tone of every table, but these profiles can help you choose a ruleset and style that sound right for you.</p>
+              <p class="section-text">Current systems are connected to active GMS game pages. The larger catalog comes from 26 player survey responses and shows what the community would like to explore. Survey interest does not mean a table is already scheduled or that a Game Master is currently available.</p>
             </div>
           </div>
 
-          <div class="system-grid">
-            <article class="system-card">
-              <div class="system-mark system-mark-dnd" aria-hidden="true">D&amp;D</div>
-              <div class="system-card-body">
-                <p class="section-kicker">Heroic fantasy</p>
-                <h2>Dungeons &amp; Dragons 5e</h2>
-                <p>Players create adventurers with distinct classes, abilities, and personalities, then work together through exploration, roleplay, problem-solving, and combat. Most uncertain actions use a twenty-sided die, while characters gain new powers as the story continues.</p>
-                <p>D&amp;D offers many character choices and tends to feel more structured during combat than during conversation or exploration. The setting can change dramatically from one adventure to another, from classic fantasy to magic school stories or highly customized homebrew worlds.</p>
-                <dl class="system-facts">
-                  <div><dt>Rules feel</dt><dd>Moderate, with tactical options</dd></div>
-                  <div><dt>Common focus</dt><dd>Adventure, teamwork, roleplay, exploration, and combat</dd></div>
-                  <div><dt>Good fit if you enjoy</dt><dd>Building a capable hero and solving problems as a party</dd></div>
-                </dl>
-                <div class="system-games">
-                  <h3>Current GMS adventures</h3>
-                  <a href="game-rise-of-the-soul-bound-constructs.html">Rise of the Soul-Bound Constructs</a>
-                  <a href="game-empire-records.html">Empire Records: Damn The Man</a>
-                  <a href="game-strixhaven-freshman-year.html">Strixhaven: Freshman Year</a>
-                  <a href="game-palace-of-shade-doorway-to-wonderland.html">Palace of Shade: Doorway to Wonderland</a>
-                </div>
-              </div>
-            </article>
+          <div class="filters-panel">
+            <div class="system-filters-grid">
+              <label class="filter-field">
+                <span>Search systems</span>
+                <input id="system-search" type="search" placeholder="Try horror, fantasy, mystery, or tactical" />
+              </label>
+              <label class="filter-field">
+                <span>Category</span>
+                <select id="system-category"><option value="">All categories</option></select>
+              </label>
+              <label class="filter-field">
+                <span>Availability</span>
+                <select id="system-availability">
+                  <option value="">All systems</option>
+                  <option value="current">Current GMS games</option>
+                  <option value="interest">Community interest</option>
+                </select>
+              </label>
+            </div>
+            <div class="filters-actions">
+              <p id="system-results-summary" class="results-summary" aria-live="polite">Loading systems...</p>
+              <button id="clear-system-filters" class="button button-secondary" type="button">Clear Filters</button>
+            </div>
+          </div>
 
-            <article class="system-card">
-              <div class="system-mark system-mark-coc" aria-hidden="true">CoC</div>
-              <div class="system-card-body">
-                <p class="section-kicker">Investigative horror</p>
-                <h2>Call of Cthulhu</h2>
-                <p>Players take the roles of investigators uncovering mysteries, dangerous secrets, and forces beyond ordinary understanding. Characters are usually capable people rather than powerful heroes, so research, interviews, observation, and cautious decisions often matter more than fighting.</p>
-                <p>Skills are written as percentages, making your chance of success easy to understand. Physical danger is serious, and encounters with the unnatural can test an investigator’s Sanity. The system is built for suspense, discovery, and consequences.</p>
-                <dl class="system-facts">
-                  <div><dt>Rules feel</dt><dd>Moderate and straightforward</dd></div>
-                  <div><dt>Common focus</dt><dd>Investigation, horror, atmosphere, and difficult choices</dd></div>
-                  <div><dt>Good fit if you enjoy</dt><dd>Mysteries where knowledge can be as dangerous as the threat</dd></div>
-                </dl>
-                <div class="system-games">
-                  <h3>Current GMS adventures</h3>
-                  <a href="game-call-of-cthulhu.html">Eat Your Heart Out</a>
-                  <a href="game-the-fall-of-itzli.html">The Fall of Itzli</a>
-                </div>
-              </div>
-            </article>
+          <section id="current-systems" class="system-catalog-section">
+            <div class="catalog-heading">
+              <p class="section-kicker">Available in current listings</p>
+              <h2>Systems being played now</h2>
+              <p>Open an adventure link to see its schedule, Game Master, price, experience level, and sign-up information.</p>
+            </div>
+            <div id="current-system-grid" class="system-grid" aria-live="polite"></div>
+          </section>
 
-            <article class="system-card">
-              <div class="system-mark system-mark-twilight" aria-hidden="true">T2K</div>
-              <div class="system-card-body">
-                <p class="section-kicker">Grounded survival</p>
-                <h2>Twilight: 2000 4e</h2>
-                <p>Twilight: 2000 focuses on ordinary people trying to survive after modern society and military order have broken down. Travel, supplies, shelter, injuries, trust, and the people you choose to protect can be as important as any firefight.</p>
-                <p>The rules support open-ended survival, base building, and detailed small-unit action. Combat can be tense and dangerous, so planning and resource management matter. GMS adventures may adapt the system to a different location or alternate-history conflict while keeping its grounded survival play.</p>
-                <dl class="system-facts">
-                  <div><dt>Rules feel</dt><dd>Moderate, with tactical and survival detail</dd></div>
-                  <div><dt>Common focus</dt><dd>Scarcity, travel, community, tactics, and hard choices</dd></div>
-                  <div><dt>Good fit if you enjoy</dt><dd>Consequential survival stories and practical problem-solving</dd></div>
-                </dl>
-                <div class="system-games">
-                  <h3>Current GMS adventure</h3>
-                  <a href="game-twilight-1984-survival-in-summerville.html">Twilight: 1984 - Survival in Summerville</a>
-                </div>
-              </div>
-            </article>
+          <section id="interest-systems" class="system-catalog-section">
+            <div class="catalog-heading">
+              <p class="section-kicker">From the player survey</p>
+              <h2>Systems the community wants to explore</h2>
+              <p>These requests help GMS-affiliated Game Masters understand what players may be interested in next. They are not announcements or guaranteed future games.</p>
+            </div>
+            <div id="interest-system-grid" class="system-grid" aria-live="polite"></div>
+          </section>
 
-            <article class="system-card">
-              <div class="system-mark system-mark-public" aria-hidden="true">PA</div>
-              <div class="system-card-body">
-                <p class="section-kicker">Analog horror mystery</p>
-                <h2>Public Access</h2>
-                <p>Players portray the Deep Lake Latchkeys, people connected to a strange New Mexico town and the public-access television station that vanished from it. The group investigates local mysteries while gradually uncovering personal memories and a larger conspiracy surrounding TV Odyssey.</p>
-                <p>The rules emphasize conversation, clues, character history, and collaborative interpretation rather than tactical combat. Players help build the town and connect evidence into theories, so the mystery develops through everyone’s ideas. Expect nostalgia, unsettling imagery, humor, and mounting dread.</p>
-                <dl class="system-facts">
-                  <div><dt>Rules feel</dt><dd>Light to moderate and narrative-focused</dd></div>
-                  <div><dt>Common focus</dt><dd>Investigation, shared worldbuilding, memory, and analog horror</dd></div>
-                  <div><dt>Good fit if you enjoy</dt><dd>Slow-burn mysteries and helping shape what the clues mean</dd></div>
-                </dl>
-                <div class="system-games">
-                  <h3>Current GMS adventure</h3>
-                  <a href="game-public-access.html">Public Access: Welcome to Deep Lake</a>
-                </div>
-              </div>
-            </article>
+          <div class="notice-panel">
+            <h3>A few survey answers need separate treatment</h3>
+            <p><strong>Homebrew</strong> can mean a custom setting, modified rules, or an entirely original system, so it is better described within the individual game listing. <strong>Warhammer: The Old World</strong> is a miniatures wargame rather than a tabletop roleplaying game, so it is not included in this RPG catalog. Interest in it can still help shape future community events.</p>
           </div>
 
           <div class="notice-panel systems-note">
-            <h3>The adventure matters too</h3>
+            <h3>The adventure and Game Master matter too</h3>
             <p>Two games using the same system can still feel completely different. Always read the individual listing for its specific tone, themes, schedule, content notes, experience level, and sign-up process.</p>
           </div>
         </div>
@@ -181,5 +147,6 @@
     </footer>
   </div>
   <script src="script.js?v=20260712-4"></script>
+  <script src="systems.js?v=20260713-1"></script>
 </body>
 </html>
