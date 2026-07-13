@@ -9,6 +9,7 @@ const interestGrid = document.querySelector("#interest-system-grid");
 const currentSection = document.querySelector("#current-systems");
 const interestSection = document.querySelector("#interest-systems");
 const summary = document.querySelector("#system-results-summary");
+const demandList = document.querySelector("#survey-demand-list");
 
 const normalize = value => String(value || "").toLowerCase().trim();
 
@@ -63,6 +64,32 @@ function createSystemCard(system) {
   return card;
 }
 
+
+function createDemandItem(system, responseCount) {
+  const item = document.createElement("li");
+  item.className = "survey-demand-item";
+
+  const copy = document.createElement("div");
+  copy.className = "survey-demand-copy";
+  const title = document.createElement("h3");
+  title.textContent = system.name;
+  const category = document.createElement("p");
+  category.textContent = system.category;
+  copy.append(title, category);
+
+  const count = document.createElement("div");
+  count.className = "survey-demand-count";
+  count.innerHTML = `<strong>${system.survey_interest_count}</strong><span>of ${responseCount}</span>`;
+
+  const progress = document.createElement("progress");
+  progress.max = responseCount;
+  progress.value = system.survey_interest_count;
+  progress.setAttribute("aria-label", `${system.name}: ${system.survey_interest_count} of ${responseCount} respondents`);
+
+  item.append(copy, count, progress);
+  return item;
+}
+
 function render(systems) {
   const query = normalize(searchInput.value);
   const category = categoryFilter.value;
@@ -103,6 +130,12 @@ fetch(SYSTEMS_URL)
   })
   .then(data => {
     const systems = data.systems || [];
+    const responseCount = data.survey_responses || 26;
+    const mostRequested = systems
+      .filter(system => Number(system.survey_interest_count) > 0)
+      .sort((a, b) => b.survey_interest_count - a.survey_interest_count || a.name.localeCompare(b.name))
+      .slice(0, 6);
+    demandList.replaceChildren(...mostRequested.map(system => createDemandItem(system, responseCount)));
     [...new Set(systems.map(system => system.category))].sort().forEach(category => {
       const option = document.createElement("option");
       option.value = category;
