@@ -27,7 +27,8 @@
           "Palace of Shade: Doorway to Wonderland",
           "game-palace-of-shade-doorway-to-wonderland.html"
         ]
-      ]
+      ],
+      "survey_interest_count": 21
     },
     {
       "name": "Call of Cthulhu (7th Edition)",
@@ -46,7 +47,8 @@
           "The Fall of Itzli",
           "game-the-fall-of-itzli.html"
         ]
-      ]
+      ],
+      "survey_interest_count": 4
     },
     {
       "name": "Twilight: 2000 (4th Edition)",
@@ -61,7 +63,8 @@
           "Twilight: 1984 - Survival in Summerville",
           "game-twilight-1984-survival-in-summerville.html"
         ]
-      ]
+      ],
+      "survey_interest_count": 0
     },
     {
       "name": "Public Access",
@@ -76,7 +79,8 @@
           "Public Access: Welcome to Deep Lake",
           "game-public-access.html"
         ]
-      ]
+      ],
+      "survey_interest_count": 0
     },
     {
       "name": "Dungeons & Dragons 2024 Revision",
@@ -85,7 +89,8 @@
       "rules": "Moderate",
       "status": "interest",
       "summary": "The revised fifth-edition rules keep D&D’s familiar heroic fantasy structure while updating character options, classes, spells, and core rules. Expect the same broad mix of roleplay, exploration, and tactical combat with refreshed mechanics.",
-      "focus": "Heroic adventure, teamwork, character growth, and tactical combat"
+      "focus": "Heroic adventure, teamwork, character growth, and tactical combat",
+      "survey_interest_count": 15
     },
     {
       "name": "Advanced Dungeons & Dragons (1e or 2e)",
@@ -94,7 +99,8 @@
       "rules": "Detailed and old-school",
       "status": "interest",
       "summary": "Earlier editions of D&D emphasize dangerous exploration, resource management, player problem-solving, and class-based fantasy adventure. The rules can be less uniform than modern games, and survival often depends on preparation and smart choices.",
-      "focus": "Dungeon exploration, risk, discovery, and classic campaign play"
+      "focus": "Dungeon exploration, risk, discovery, and classic campaign play",
+      "survey_interest_count": 4
     },
     {
       "name": "Pathfinder 2nd Edition",
@@ -103,7 +109,8 @@
       "rules": "Detailed",
       "status": "interest",
       "summary": "A highly structured fantasy RPG with extensive character customization and tightly designed tactical combat. Clear action rules give players many meaningful choices both when building a character and during encounters.",
-      "focus": "Character builds, teamwork, tactical combat, and fantasy adventure"
+      "focus": "Character builds, teamwork, tactical combat, and fantasy adventure",
+      "survey_interest_count": 4
     },
     {
       "name": "Daggerheart",
@@ -112,7 +119,8 @@
       "rules": "Moderate",
       "status": "interest",
       "summary": "A story-forward fantasy RPG that uses paired Hope and Fear dice to shape both success and narrative consequences. It supports cinematic heroes, flexible character expression, strong relationships, and campaign-length adventures.",
-      "focus": "Collaborative storytelling, heroic fantasy, relationships, and cinematic action"
+      "focus": "Collaborative storytelling, heroic fantasy, relationships, and cinematic action",
+      "survey_interest_count": 5
     },
     {
       "name": "Shadowdark RPG",
@@ -121,7 +129,8 @@
       "rules": "Light",
       "status": "interest",
       "summary": "A streamlined dungeon-crawling game that combines modern d20 rules with old-school danger and fast decisions. Real-time torchlight, limited resources, and fragile characters make exploration tense and rewarding.",
-      "focus": "Dungeon exploration, risk management, treasure, and fast play"
+      "focus": "Dungeon exploration, risk management, treasure, and fast play",
+      "survey_interest_count": 1
     },
     {
       "name": "Perils & Princesses",
@@ -130,7 +139,8 @@
       "rules": "Light",
       "status": "interest",
       "summary": "A fairy-tale adventure game that balances bright storybook wonder with real danger. Its streamlined rules support clever problem-solving, distinctive princess classes, families, newcomers, and experienced players looking for something lighter.",
-      "focus": "Fairy tales, exploration, creativity, and gritty-but-pretty adventure"
+      "focus": "Fairy tales, exploration, creativity, and gritty-but-pretty adventure",
+      "survey_interest_count": 2
     },
     {
       "name": "The One Ring (2nd Edition)",
@@ -139,7 +149,8 @@
       "rules": "Moderate",
       "status": "interest",
       "summary": "A Middle-earth RPG centered on journeys, fellowship, difficult choices, and resisting the Shadow. The rules support travel and heroic adventure while keeping the tone grounded in Tolkien’s themes rather than conventional high-powered fantasy.",
-      "focus": "Journeys, fellowship, hope, corruption, and Middle-earth adventure"
+      "focus": "Journeys, fellowship, hope, corruption, and Middle-earth adventure",
+      "survey_interest_count": 1
     },
     {
       "name": "The Witcher RPG",
@@ -148,7 +159,8 @@
       "rules": "Detailed",
       "status": "interest",
       "summary": "A gritty fantasy RPG set in the world of The Witcher, where politics, prejudice, monsters, and professional skill matter. Characters can include witchers and other capable roles, while combat and preparation can be unforgiving.",
-      "focus": "Monster hunting, investigation, politics, crafting, and dangerous combat"
+      "focus": "Monster hunting, investigation, politics, crafting, and dangerous combat",
+      "survey_interest_count": 1
     },
     {
       "name": "Cosmere Roleplaying Game",
@@ -157,7 +169,8 @@
       "rules": "Moderate",
       "status": "interest",
       "summary": "An expansive fantasy RPG built for adventures across Brandon Sanderson’s connected Cosmere settings. Characters combine personal goals, talents, and setting-specific magic in stories designed to support both narrative choices and tactical action.",
-      "focus": "Epic stories, distinctive magic, character goals, and world-spanning adventure"
+      "focus": "Epic stories, distinctive magic, character goals, and world-spanning adventure",
+      "survey_interest_count": 1
     },
     {
       "name": "Gates of Krystalia",
@@ -166,7 +179,8 @@
       "rules": "Moderate and card-based",
       "status": "interest",
       "summary": "A narrative isekai RPG about heroes transported into a fantasy world. It replaces dice with playing cards and supports cinematic combat, relationships, crafting, character progression, and building a kingdom.",
-      "focus": "Anime adventure, card play, relationships, progression, and kingdom building"
+      "focus": "Anime adventure, card play, relationships, progression, and kingdom building",
+      "survey_interest_count": 1
     },
     {
       "name": "Warhammer Fantasy Roleplay (4th Edition)",
@@ -175,7 +189,8 @@
       "rules": "Detailed",
       "status": "interest",
       "summary": "A grim and often darkly funny fantasy game about imperfect people navigating corruption, danger, disease, and social inequality. Percentile rules and career-based characters create a grounded experience where combat can be brutal.",
-      "focus": "Investigation, social conflict, careers, corruption, and dangerous combat"
+      "focus": "Investigation, social conflict, careers, corruption, and dangerous combat",
+      "survey_interest_count": 3
     },
     {
       "name": "Vampire: The Masquerade (5th Edition)",
@@ -184,7 +199,8 @@
       "rules": "Moderate",
       "status": "interest",
       "summary": "Play a vampire struggling with hunger, personal convictions, secret politics, and the need to hide from human society. The game focuses on relationships, moral compromise, faction conflict, and the tension between humanity and the Beast.",
-      "focus": "Personal horror, politics, relationships, hunger, and moral choices"
+      "focus": "Personal horror, politics, relationships, hunger, and moral choices",
+      "survey_interest_count": 7
     },
     {
       "name": "Werewolf: The Apocalypse",
@@ -193,7 +209,8 @@
       "rules": "Moderate",
       "status": "interest",
       "summary": "Play a werewolf fighting spiritual and ecological threats while managing rage, identity, and loyalty to a pack. Stories often combine action, community, activism, and the cost of confronting a damaged world.",
-      "focus": "Pack bonds, rage, spiritual conflict, action, and environmental horror"
+      "focus": "Pack bonds, rage, spiritual conflict, action, and environmental horror",
+      "survey_interest_count": 1
     },
     {
       "name": "Hunter: The Reckoning",
@@ -202,7 +219,8 @@
       "rules": "Moderate",
       "status": "interest",
       "summary": "Play ordinary people who recognize supernatural threats and choose to fight back without the protection of powerful institutions. Investigation, preparation, desperation, and disagreement over what must be done drive the story.",
-      "focus": "Investigation, human vulnerability, teamwork, and confronting monsters"
+      "focus": "Investigation, human vulnerability, teamwork, and confronting monsters",
+      "survey_interest_count": 2
     },
     {
       "name": "Alien: The Roleplaying Game",
@@ -211,7 +229,8 @@
       "rules": "Moderate",
       "status": "interest",
       "summary": "A tense science-fiction horror game about survival in a hostile corporate future. Stress can sharpen a character’s performance or trigger panic, while limited resources and lethal threats keep every decision consequential.",
-      "focus": "Survival horror, stress, exploration, corporate danger, and cinematic tension"
+      "focus": "Survival horror, stress, exploration, corporate danger, and cinematic tension",
+      "survey_interest_count": 4
     },
     {
       "name": "Kids on Bikes",
@@ -220,7 +239,8 @@
       "rules": "Light",
       "status": "interest",
       "summary": "A collaborative game about young people and other local characters investigating strange events in a small town. The group helps create the setting and relationships, while simple rules keep the focus on mystery, friendship, and discovery.",
-      "focus": "Small-town mysteries, friendship, shared worldbuilding, and coming-of-age stories"
+      "focus": "Small-town mysteries, friendship, shared worldbuilding, and coming-of-age stories",
+      "survey_interest_count": 2
     },
     {
       "name": "Monsterhearts 2",
@@ -229,7 +249,8 @@
       "rules": "Light and narrative",
       "status": "interest",
       "summary": "A game about messy teenage monsters whose powers and identities complicate desire, status, vulnerability, and relationships. It is emotionally intense and built around social consequences rather than tactical adventure.",
-      "focus": "Teen drama, identity, relationships, power, and supernatural metaphor"
+      "focus": "Teen drama, identity, relationships, power, and supernatural metaphor",
+      "survey_interest_count": 2
     },
     {
       "name": "City of Mist",
@@ -238,7 +259,8 @@
       "rules": "Moderate and narrative",
       "status": "interest",
       "summary": "Play ordinary people who also embody myths, legends, or stories in a modern city full of mysteries. Flexible descriptive tags define abilities, while investigations and personal conflicts create a cinematic noir experience.",
-      "focus": "Mystery, urban fantasy, personal identity, noir, and cinematic action"
+      "focus": "Mystery, urban fantasy, personal identity, noir, and cinematic action",
+      "survey_interest_count": 3
     },
     {
       "name": "Girl by Moonlight",
@@ -247,7 +269,8 @@
       "rules": "Moderate and narrative",
       "status": "interest",
       "summary": "A game about magical heroes fighting oppressive forces while navigating identity, relationships, and transformation. Different playsets can evoke magical-girl anime, tragic resistance stories, mecha drama, or other emotional team narratives.",
-      "focus": "Transformation, resistance, relationships, identity, and dramatic action"
+      "focus": "Transformation, resistance, relationships, identity, and dramatic action",
+      "survey_interest_count": 2
     },
     {
       "name": "Blades in the Dark",
@@ -256,7 +279,8 @@
       "rules": "Moderate and narrative",
       "status": "interest",
       "summary": "Play daring scoundrels building a criminal crew in a haunted industrial city. Flashbacks and flexible planning move quickly into action, while stress, consequences, faction politics, and the crew’s growing reputation shape the campaign.",
-      "focus": "Heists, criminal enterprise, consequences, factions, and crew advancement"
+      "focus": "Heists, criminal enterprise, consequences, factions, and crew advancement",
+      "survey_interest_count": 2
     },
     {
       "name": "Thirsty Sword Lesbians",
@@ -265,7 +289,8 @@
       "rules": "Light and narrative",
       "status": "interest",
       "summary": "A story-focused game about queer heroes crossing swords, sharing feelings, challenging injustice, and forming complicated relationships. Emotional stakes and character connections matter as much as action.",
-      "focus": "Romance, identity, relationships, swashbuckling action, and social justice"
+      "focus": "Romance, identity, relationships, swashbuckling action, and social justice",
+      "survey_interest_count": 2
     },
     {
       "name": "Glitter Hearts",
@@ -274,7 +299,8 @@
       "rules": "Moderate and narrative",
       "status": "interest",
       "summary": "Play everyday people who transform into colorful heroes and balance ordinary life with saving the world. The group creates its own team, powers, relationships, and even a mascot, drawing on magical-girl and sentai stories.",
-      "focus": "Transformation, teamwork, relationships, heroic action, and everyday life"
+      "focus": "Transformation, teamwork, relationships, heroic action, and everyday life",
+      "survey_interest_count": 2
     },
     {
       "name": "Good Society",
@@ -283,7 +309,8 @@
       "rules": "Light and narrative",
       "status": "interest",
       "summary": "A collaborative game inspired by Jane Austen, focused on reputation, family expectations, romance, ambition, and carefully managed scandal. Players help shape the wider cast and story without relying on tactical combat.",
-      "focus": "Romance, reputation, social pressure, letters, and Regency drama"
+      "focus": "Romance, reputation, social pressure, letters, and Regency drama",
+      "survey_interest_count": 1
     },
     {
       "name": "Avatar Legends: The Roleplaying Game",
@@ -292,7 +319,8 @@
       "rules": "Light to moderate",
       "status": "interest",
       "summary": "Play young heroes in the world of Avatar: The Last Airbender and The Legend of Korra. The rules emphasize character growth, balance, relationships, bending-inspired techniques, and resolving conflicts that are both personal and political.",
-      "focus": "Team adventure, balance, relationships, growth, and elemental action"
+      "focus": "Team adventure, balance, relationships, growth, and elemental action",
+      "survey_interest_count": 1
     },
     {
       "name": "Cyberpunk RED",
@@ -301,7 +329,8 @@
       "rules": "Detailed",
       "status": "interest",
       "summary": "A near-future game about skilled Edgerunners taking dangerous jobs in a city shaped by corporations, scarcity, technology, and street culture. Equipment, cyberware, reputation, and lethal combat support gritty mission-based play.",
-      "focus": "High-risk jobs, technology, street life, character style, and combat"
+      "focus": "High-risk jobs, technology, street life, character style, and combat",
+      "survey_interest_count": 2
     },
     {
       "name": "Shadowrun (6th Edition)",
@@ -310,7 +339,8 @@
       "rules": "Detailed",
       "status": "interest",
       "summary": "A cyberpunk heist game where hackers, street samurai, mages, and fantasy peoples operate in a corporate-controlled future. Characters combine specialized gear, magic, cyberware, and teamwork to survive complicated missions.",
-      "focus": "Heists, cyberpunk, magic, team roles, gear, and corporate intrigue"
+      "focus": "Heists, cyberpunk, magic, team roles, gear, and corporate intrigue",
+      "survey_interest_count": 5
     },
     {
       "name": "Metro:Otherscape",
@@ -319,7 +349,8 @@
       "rules": "Moderate and narrative",
       "status": "interest",
       "summary": "A cyberpunk fantasy game where advanced technology and resurgent myth reshape people and cities. Tag-based characters can draw power from tech, myth, or personal identity, supporting cinematic action and flexible problem-solving.",
-      "focus": "Cyberpunk, myth, identity, city stories, and cinematic action"
+      "focus": "Cyberpunk, myth, identity, city stories, and cinematic action",
+      "survey_interest_count": 1
     },
     {
       "name": "Traveller",
@@ -328,7 +359,8 @@
       "rules": "Moderate",
       "status": "interest",
       "summary": "A classic science-fiction RPG about capable people traveling between worlds, taking jobs, trading, exploring, and dealing with political or personal complications. Campaigns can range from grounded merchant stories to military, diplomatic, or exploratory adventures.",
-      "focus": "Space travel, careers, exploration, trade, and open-ended campaigns"
+      "focus": "Space travel, careers, exploration, trade, and open-ended campaigns",
+      "survey_interest_count": 7
     },
     {
       "name": "Star Wars Roleplaying Game (Fantasy Flight / Edge Studio)",
@@ -337,7 +369,8 @@
       "rules": "Moderate",
       "status": "interest",
       "summary": "A cinematic Star Wars RPG using custom narrative dice that add advantages and complications beyond simple success or failure. Different core lines support smugglers and rebels, military campaigns, and Force-sensitive characters.",
-      "focus": "Cinematic action, character obligations, teamwork, the Force, and galactic adventure"
+      "focus": "Cinematic action, character obligations, teamwork, the Force, and galactic adventure",
+      "survey_interest_count": 4
     },
     {
       "name": "Dune: Adventures in the Imperium",
@@ -346,7 +379,8 @@
       "rules": "Moderate",
       "status": "interest",
       "summary": "Play agents of a noble House navigating politics, espionage, warfare, and survival in the Dune universe. The game can move between personal scenes and large-scale assets while emphasizing plans, leverage, and consequences.",
-      "focus": "Politics, intrigue, espionage, House power, and desert survival"
+      "focus": "Politics, intrigue, espionage, House power, and desert survival",
+      "survey_interest_count": 1
     },
     {
       "name": "Lancer",
@@ -355,7 +389,8 @@
       "rules": "Detailed in combat",
       "status": "interest",
       "summary": "A hopeful far-future game about mech pilots taking on dangerous missions. Narrative play is relatively streamlined, while mech construction and grid-based combat offer deep tactical choices and extensive customization.",
-      "focus": "Mech customization, tactical combat, missions, and pilot stories"
+      "focus": "Mech customization, tactical combat, missions, and pilot stories",
+      "survey_interest_count": 1
     },
     {
       "name": "Warhammer 40,000: Wrath & Glory",
@@ -364,7 +399,8 @@
       "rules": "Moderate",
       "status": "interest",
       "summary": "A flexible Warhammer 40,000 RPG built for action across many power levels, from desperate human survivors to Space Marines and other iconic factions. Dice pools support fast, cinematic missions in a violent far-future setting.",
-      "focus": "Action, faction play, corruption, grim science fantasy, and cinematic combat"
+      "focus": "Action, faction play, corruption, grim science fantasy, and cinematic combat",
+      "survey_interest_count": 3
     },
     {
       "name": "Rogue Trader",
@@ -373,7 +409,8 @@
       "rules": "Detailed",
       "status": "interest",
       "summary": "Play the command crew of a powerful voidship exploring, trading, negotiating, and conquering on the edge of the Imperium. The older percentile-based system supports ambitious campaigns with ship operations, politics, and dangerous expeditions.",
-      "focus": "Voidship travel, exploration, trade, command, and grimdark politics"
+      "focus": "Voidship travel, exploration, trade, command, and grimdark politics",
+      "survey_interest_count": 1
     },
     {
       "name": "Savage Worlds Adventure Edition",
@@ -382,7 +419,8 @@
       "rules": "Moderate",
       "status": "interest",
       "summary": "A fast-moving universal system that can support pulp adventure, fantasy, horror, westerns, science fiction, and many other settings. Exploding dice, cards for initiative, and flexible character options encourage energetic, cinematic play.",
-      "focus": "Fast action, flexible settings, pulpy heroes, and tactical encounters"
+      "focus": "Fast action, flexible settings, pulpy heroes, and tactical encounters",
+      "survey_interest_count": 2
     }
   ]
 }
