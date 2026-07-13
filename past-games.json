@@ -1,0 +1,310 @@
+{
+  "system_guides": {
+    "D&D 5e": "A class-based d20 fantasy game with a familiar mix of roleplay, exploration, and tactical combat. Characters grow steadily more capable as the story continues.",
+    "AD&D 2e": "An older-school fantasy game with distinct classes, detailed procedures, and more danger than modern D&D. Careful planning and creative problem-solving matter.",
+    "D&D (edition not recorded)": "A fantasy adventure using a version of Dungeons & Dragons that was not preserved in the public archive. Expect character roles, d20 checks, exploration, and combat.",
+    "Kids on Bikes": "A rules-light, story-first game about ordinary people facing strange mysteries. Relationships, shared worldbuilding, and risky choices matter more than tactical combat.",
+    "Kids on Brooms": "A rules-light game of magical school life, friendships, rivalries, and mysteries. Players help shape the school and story together, with flexible dice mechanics rather than tactical combat.",
+    "Traveller": "A skill-based 2d6 science-fiction game built for open-ended travel, trade, exploration, and survival. Choices and consequences drive the story more than character levels.",
+    "Deadlands: The Weird West": "Fast-moving western adventure mixed with horror, magic, and alternate history. Cards, poker-inspired mechanics, and cinematic action give the system its distinctive feel.",
+    "Final Fantasy 5e": "A fantasy adventure built on D&D 5e with Final Fantasy-inspired heroes, magic, monsters, and tone. Expect recognizable d20 play with video-game-inspired flavor.",
+    "Cyberpunk (edition not recorded)": "A high-tech, low-life game where skills, equipment, reputation, and hard choices matter. The exact Cyberpunk edition was not preserved in the public archive.",
+    "Twilight: 2000": "A grounded survival game focused on scarce resources, travel, difficult decisions, and dangerous tactical encounters in a world destabilized by war.",
+    "Good Society": "A collaborative social roleplaying game inspired by Regency drama. Relationships, reputation, letters, rumors, and personal desires take the place of traditional combat.",
+    "Star Trek (edition not recorded)": "A science-fiction adventure centered on a starship crew solving problems through cooperation, expertise, diplomacy, and exploration. The exact edition was not preserved.",
+    "Shadowdark": "A fast, dangerous fantasy dungeon-crawling game with simple rules, old-school pressure, and limited resources. Clever decisions are often safer than a fair fight.",
+    "Fallout 2d20": "A post-apocalyptic 2d20 game about exploration, scavenging, survival, and action in the Fallout universe. Players build dice pools and spend resources to improve important rolls.",
+    "Ten Candles": "A rules-light tragic horror game designed for a single intense session. The characters will not survive, so play focuses on hope, fear, sacrifice, and the story of their final hours.",
+    "Call of Cthulhu 7e": "A percentile-based mystery and horror game about ordinary people investigating truths that can threaten their safety and sanity. Clues and difficult choices matter more than winning fights.",
+    "System not publicly recorded": "The surviving archive identifies the adventure but not its rules system. The public listing stays intentionally general rather than guessing."
+  },
+  "games": [
+    {
+      "title": "Stranger Things and Dungeons & Dragons",
+      "system": "D&D (edition not recorded)",
+      "summary": "A past genre-mixing adventure inspired by small-town supernatural mystery and fantasy roleplaying.",
+      "source": "Campaign archive channel"
+    },
+    {
+      "title": "The Magnus Archives: Brinewater",
+      "system": "Kids on Bikes",
+      "gm": "Dylan",
+      "year": 2025,
+      "format": "Four-session adventure",
+      "summary": "Investigators search for a missing colleague in a cozy Maine town while confronting eldritch mysteries, dangerous secrets, and mounting madness.",
+      "details": "Originally planned for biweekly Wednesday sessions with maps, props, puzzles, and a dedicated soundtrack."
+    },
+    {
+      "title": "Monster Hunter 5e",
+      "system": "D&D 5e",
+      "gm": "Glenn",
+      "year": 2025,
+      "format": "Monthly campaign",
+      "summary": "A combat- and strategy-forward adventure inspired by Capcom's Monster Hunter, featuring large hunts and handcrafted terrain.",
+      "details": "The game added monster-part crafting, equipment upgrades, and specialized weapons such as gunlances, hunting horns, and bowguns."
+    },
+    {
+      "title": "Traveller: Sword World Adventures",
+      "system": "Traveller",
+      "gm": "Adam",
+      "year": 2025,
+      "format": "Campaign",
+      "summary": "A sandbox space-opera campaign built around long-distance travel, exploration, and life in a vast interstellar setting.",
+      "details": "The original introduction emphasized Traveller's Age of Sail feeling, slow faster-than-light travel, and player-directed adventure."
+    },
+    {
+      "title": "Humblewood",
+      "system": "D&D 5e",
+      "year": 2025,
+      "format": "Biweekly campaign",
+      "summary": "Animal-folk heroes face returning wildfire and growing rebellion around the Scorched Grove in the woodland realm of Humblewood.",
+      "details": "The archived listing advertised Wednesday evening sessions. The Game Master's public name was not preserved in the supplied material."
+    },
+    {
+      "title": "Cyberpunk",
+      "system": "Cyberpunk (edition not recorded)",
+      "summary": "A past cyberpunk adventure preserved in the campaign archive; the edition and campaign details are still being documented."
+    },
+    {
+      "title": "Planescape: Turn of Fortune's Wheel",
+      "system": "D&D 5e",
+      "gm": "Mike",
+      "year": 2024,
+      "format": "8–10-session campaign",
+      "summary": "Amnesiac heroes cross strange planes, bargain with extraplanar powers, and piece together identities that could change the multiverse.",
+      "details": "The campaign emphasized exploration, mystery, character development, and the unusual possibilities of Sigil and the planes."
+    },
+    {
+      "title": "Final Fantasy 5e",
+      "system": "Final Fantasy 5e",
+      "gm": "John",
+      "format": "10–12-session campaign",
+      "summary": "A D&D 5e campaign shaped by Final Fantasy-style heroes, magic, monsters, and cinematic fantasy adventure.",
+      "details": "The archived listing described three-hour Sunday sessions for up to five players and welcomed both newcomers and veterans."
+    },
+    {
+      "title": "Twilight: 2000",
+      "system": "Twilight: 2000",
+      "summary": "A past military-survival campaign preserved in the archive; its specific scenario and table details are still being documented."
+    },
+    {
+      "title": "Family Ghibli",
+      "system": "System not publicly recorded",
+      "summary": "A family-oriented adventure with Studio Ghibli-inspired themes preserved in the campaign archive."
+    },
+    {
+      "title": "Bridgerton: Good Society",
+      "system": "Good Society",
+      "summary": "A Regency social-drama game inspired by Bridgerton, built around relationships, reputation, romance, and personal ambition."
+    },
+    {
+      "title": "AD&D 2e Character Workshop",
+      "system": "AD&D 2e",
+      "gm": "Mike",
+      "year": 2024,
+      "format": "Character-building workshop",
+      "summary": "A guided return to Advanced Dungeons & Dragons 2nd Edition focused on building characters, revisiting classic rules, and gauging interest in future play.",
+      "details": "The archived listing described an adult character-building evening with guided character creation and a classic-rules refresher."
+    },
+    {
+      "title": "Expedition to the Barrier Peaks",
+      "system": "D&D 5e",
+      "gm": "Adam",
+      "year": 2025,
+      "format": "4–6-session adventure",
+      "summary": "An 8th-level expedition into a classic science-fantasy location where dungeon exploration meets strange technology.",
+      "details": "The archived listing planned alternating Thursday evening sessions beginning in July 2025."
+    },
+    {
+      "title": "Severance RPG",
+      "system": "System not publicly recorded",
+      "summary": "A past adventure inspired by Severance. The surviving channel name does not identify the rules system or full scenario."
+    },
+    {
+      "title": "Star Trek",
+      "system": "Star Trek (edition not recorded)",
+      "summary": "A past Star Trek adventure centered on exploration and life aboard a starship; its exact edition and scenario are still being documented."
+    },
+    {
+      "title": "Scooby-Doo: Mystery Inc.",
+      "system": "System not publicly recorded",
+      "summary": "A mystery adventure inspired by Scooby-Doo and its team of curious investigators."
+    },
+    {
+      "title": "Shadowdark",
+      "system": "Shadowdark",
+      "summary": "A past old-school fantasy adventure featuring fast play, dangerous exploration, and resource pressure."
+    },
+    {
+      "title": "Baldur's Gate: Sword Coast",
+      "system": "D&D 5e",
+      "gm": "John",
+      "year": 2024,
+      "format": "Campaign",
+      "summary": "A character-first Sword Coast campaign featuring the places, factions, and difficult choices associated with Baldur's Gate.",
+      "details": "The archived listing described Wednesday evening sessions with room for six players."
+    },
+    {
+      "title": "Over the Garden Wall",
+      "system": "Kids on Bikes",
+      "gm": "Dylan",
+      "year": 2024,
+      "format": "Two-part adventure",
+      "summary": "A rules-light mystery inspired by the strange, autumnal world of Over the Garden Wall.",
+      "details": "The original listing planned two Friday evening sessions for up to six players."
+    },
+    {
+      "title": "A Merry Murder Mystery",
+      "system": "D&D 5e",
+      "gm": "Dylan",
+      "year": 2024,
+      "format": "Holiday one-shot",
+      "summary": "Santa has been found dead on Christmas Eve, and tensions are rising at the North Pole as the investigation begins.",
+      "details": "The original three-hour event welcomed ages 12 and older with parent permission and included hot chocolate."
+    },
+    {
+      "title": "Arastril Academy Chronicles",
+      "system": "D&D 5e",
+      "year": 2024,
+      "format": "Biweekly campaign",
+      "summary": "A magic-academy fantasy campaign built around students, spells, and adventure beyond the classroom.",
+      "details": "The archived listing planned Wednesday evening sessions. The Game Master's public name was not preserved in the supplied material."
+    },
+    {
+      "title": "Harry Potter: Kids on Brooms",
+      "system": "Kids on Brooms",
+      "gm": "John",
+      "year": 2023,
+      "format": "Multi-part adventure",
+      "summary": "New students build friendships and rivalries while exploring haunted hallways, dangerous forests, and secrets around Hogwarts.",
+      "details": "The game used collaborative, rules-light Kids on Brooms mechanics to focus on magical school life and mystery."
+    },
+    {
+      "title": "LEGO D&D 5e",
+      "system": "D&D 5e",
+      "summary": "A playful D&D 5e adventure combining fantasy roleplaying with a LEGO-inspired presentation."
+    },
+    {
+      "title": "Deadlands: The Weird West",
+      "system": "Deadlands: The Weird West",
+      "gm": "Mike",
+      "year": 2024,
+      "format": "Campaign",
+      "summary": "Gunslingers, hucksters, shamans, and mad scientists confront supernatural danger in an alternate-history American West.",
+      "details": "The campaign introduced poker-inspired mechanics, character creation, and the setting's mix of western action, horror, steampunk, and magic."
+    },
+    {
+      "title": "Barbenheimer",
+      "system": "System not publicly recorded",
+      "summary": "A past themed adventure preserved under the title Barbenheimer; its system and full premise are still being documented."
+    },
+    {
+      "title": "The Search for the Fallen Silmaril",
+      "system": "D&D 5e",
+      "summary": "A fantasy quest inspired by Tolkien's legendarium and the search for a lost Silmaril."
+    },
+    {
+      "title": "Fallout 2d20",
+      "system": "Fallout 2d20",
+      "summary": "A post-apocalyptic Fallout adventure featuring exploration, scavenging, survival, and danger beyond the safety of the settlements."
+    },
+    {
+      "title": "Ten Candles",
+      "system": "Ten Candles",
+      "format": "Tragic-horror one-shot",
+      "summary": "A past tragic-horror session about ordinary people searching for hope during their final hours in a darkening world."
+    },
+    {
+      "title": "Arcane",
+      "system": "System not publicly recorded",
+      "summary": "A past adventure inspired by Arcane; the surviving archive does not identify the rules system or full scenario."
+    },
+    {
+      "title": "Percy Jackson: Kids on Brooms",
+      "system": "Kids on Brooms",
+      "summary": "A rules-light mythic adventure inspired by Percy Jackson, with young heroes, relationships, and supernatural trouble."
+    },
+    {
+      "title": "Icewind Dale",
+      "system": "D&D 5e",
+      "summary": "A D&D 5e adventure in the frozen North, where isolation, exploration, and cold-weather danger shape the story."
+    },
+    {
+      "title": "Tyranny of Dragons",
+      "system": "D&D 5e",
+      "summary": "A sweeping D&D 5e campaign involving dragon cults, dangerous journeys, and a growing threat to the realm."
+    },
+    {
+      "title": "Crypts of Azarumme",
+      "system": "D&D 5e",
+      "summary": "A past D&D 5e fantasy adventure preserved in the campaign archive; additional scenario details are still being documented."
+    },
+    {
+      "title": "Basilisk",
+      "system": "System not publicly recorded",
+      "summary": "A past adventure archived under the working channel name Basilisk; its rules system and premise are not yet publicly recorded."
+    },
+    {
+      "title": "Bonds of Blood",
+      "system": "D&D 5e",
+      "summary": "A past D&D 5e adventure preserved in the campaign archive; additional scenario details are still being documented."
+    },
+    {
+      "title": "Tomb of Horrors",
+      "system": "D&D 5e",
+      "summary": "A deadly D&D 5e dungeon challenge built around traps, puzzles, careful exploration, and high consequences."
+    },
+    {
+      "title": "D&D at Labyrinth Brewing Co.",
+      "system": "D&D (edition not recorded)",
+      "format": "Venue game",
+      "summary": "A past public Dungeons & Dragons game hosted at Labyrinth Brewing Co. The edition and scenario were not preserved in the supplied material."
+    },
+    {
+      "title": "Dark Sun 2e",
+      "system": "AD&D 2e",
+      "summary": "An old-school fantasy adventure in Dark Sun's harsh desert world, where survival, scarce resources, and dangerous powers define play."
+    },
+    {
+      "title": "Artifacts of the Aether",
+      "system": "System not publicly recorded",
+      "format": "Series",
+      "summary": "A past adventure series preserved in the campaign archive; its rules system and full premise are still being documented."
+    },
+    {
+      "title": "Signals Errant",
+      "system": "Call of Cthulhu 7e",
+      "summary": "A Call of Cthulhu mystery involving ominous signals, investigation, and threats that may be safer left unknown."
+    },
+    {
+      "title": "Goodbye, Ye Olde Ruby Tuesday",
+      "system": "D&D 5e",
+      "summary": "A past D&D 5e adventure preserved in the campaign archive; additional scenario details are still being documented."
+    },
+    {
+      "title": "Pure of Heart",
+      "system": "D&D 5e",
+      "summary": "A past D&D 5e adventure preserved in the campaign archive; additional scenario details are still being documented."
+    },
+    {
+      "title": "The Rise of Vecna",
+      "system": "D&D 5e",
+      "summary": "A high-stakes D&D 5e adventure centered on the growing threat of Vecna and the secrets surrounding the lich-god."
+    },
+    {
+      "title": "The Sunless Citadel",
+      "system": "D&D 5e",
+      "summary": "A classic dungeon adventure featuring a ruined fortress, rival factions, strange creatures, and mysteries below the surface."
+    },
+    {
+      "title": "Dawn Beyond the Pyramid",
+      "system": "System not publicly recorded",
+      "summary": "A past adventure preserved in the campaign archive; its rules system and full scenario are still being documented."
+    },
+    {
+      "title": "Fallout: Modiphius 2d20",
+      "system": "Fallout 2d20",
+      "summary": "A Fallout 2d20 adventure about surviving and exploring the wasteland through scavenging, hard choices, and action."
+    }
+  ]
+}
