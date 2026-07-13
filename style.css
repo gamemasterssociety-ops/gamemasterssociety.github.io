@@ -725,3 +725,166 @@ body.modal-open { overflow: hidden; }
   .partnership-promo-copy { padding: 25px 21px; }
   .partnership-promo-card > img { min-height: 220px; }
 }
+
+
+/* Player survey insights */
+.survey-insights-panel {
+  padding: clamp(28px, 5vw, 52px);
+  color: #fff;
+  background:
+    radial-gradient(circle at 92% 10%, rgba(232,199,128,.19), transparent 30%),
+    var(--forest-dark);
+  border-radius: var(--radius-lg);
+}
+.survey-insights-heading,
+.survey-demand-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 28px;
+}
+.survey-insights-heading > div,
+.survey-demand-heading > div { max-width: 760px; }
+.survey-insights-heading .section-kicker,
+.survey-insights-heading h2 { color: #fff; }
+.survey-insights-heading p:not(.section-kicker) {
+  margin: 13px 0 0;
+  color: #d5dfd9;
+}
+.survey-insights-heading .button-secondary {
+  flex-shrink: 0;
+  color: #fff;
+  border-color: #82978c;
+}
+.survey-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 32px;
+}
+.survey-stats-grid article {
+  padding: 22px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--radius-md);
+}
+.survey-stats-grid strong {
+  display: block;
+  color: #e8c780;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+.survey-stats-grid h3 {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 1.08rem;
+}
+.survey-stats-grid p {
+  margin: 8px 0 0;
+  color: #cdd8d1;
+  font-size: .88rem;
+}
+.survey-method-note {
+  margin: 18px 0 0;
+  color: #aebfb4;
+  font-size: .8rem;
+}
+.survey-demand-panel {
+  padding: 28px;
+  margin-bottom: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 7px 22px rgba(45,39,29,.05);
+}
+.survey-demand-heading { align-items: center; }
+.survey-demand-heading h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+.survey-demand-heading p:not(.section-kicker) {
+  max-width: 70ch;
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+.survey-demand-heading .button { flex-shrink: 0; }
+.survey-demand-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 24px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: demand-rank;
+}
+.survey-demand-item {
+  counter-increment: demand-rank;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 14px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+.survey-demand-copy {
+  position: relative;
+  padding-left: 32px;
+}
+.survey-demand-copy::before {
+  content: counter(demand-rank, decimal-leading-zero);
+  position: absolute;
+  top: 2px;
+  left: 0;
+  color: var(--rust);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+.survey-demand-copy h3 { font-size: 1.05rem; }
+.survey-demand-copy p {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: .78rem;
+}
+.survey-demand-count {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  color: var(--muted);
+}
+.survey-demand-count strong {
+  color: var(--forest);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.45rem;
+}
+.survey-demand-count span { font-size: .75rem; }
+.survey-demand-item progress {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background: #e8e1d5;
+}
+.survey-demand-item progress::-webkit-progress-bar {
+  background: #e8e1d5;
+  border-radius: 999px;
+}
+.survey-demand-item progress::-webkit-progress-value {
+  background: var(--forest);
+  border-radius: 999px;
+}
+.survey-demand-item progress::-moz-progress-bar {
+  background: var(--forest);
+  border-radius: 999px;
+}
+@media (max-width: 900px) {
+  .survey-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .survey-insights-heading,
+  .survey-demand-heading { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 620px) {
+  .survey-stats-grid,
+  .survey-demand-list { grid-template-columns: 1fr; }
+  .survey-demand-panel { padding: 22px; }
+  .survey-demand-heading .button { width: 100%; }
+}
