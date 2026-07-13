@@ -1256,9 +1256,6 @@ body.modal-open { overflow: hidden; }
   object-fit: cover;
   object-position: center;
 }
-.hero-photo-card--portrait img {
-  object-position: center 38%;
-}
 .hero-photo-card figcaption,
 .photo-feature-card figcaption {
   color: var(--forest-dark);
@@ -1340,4 +1337,40 @@ body.modal-open { overflow: hidden; }
     border-left: 0;
     border-top: 1px solid var(--line);
   }
+}
+
+
+/* Layout containment and edge fixes */
+html {
+  max-width: 100%;
+  overflow-x: clip;
+}
+body,
+.site-shell {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+@supports (overflow: clip) {
+  body,
+  .site-shell { overflow-x: clip; }
+}
+.hero-grid > *,
+.hero-copy,
+.hero-panel {
+  min-width: 0;
+}
+.hero-actions > * {
+  max-width: 100%;
+}
+.partnership-hero .hero-actions {
+  align-items: flex-start;
+}
+.partnership-hero .share-status {
+  flex: 0 0 100%;
+  width: 100%;
+}
+.site-nav .nav-group:last-child .nav-submenu {
+  right: 0;
+  left: auto;
 }
