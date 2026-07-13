@@ -640,6 +640,20 @@ h2 {
   margin: 10px 0 0;
 }
 
+.leadership-card-director {
+  overflow: hidden;
+}
+
+.leadership-headshot {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line-strong);
+  margin-bottom: 18px;
+}
+
 .link-panel {
   border-radius: var(--radius-xl);
   padding: 20px;
