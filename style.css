@@ -1374,3 +1374,19 @@ body,
   right: 0;
   left: auto;
 }
+
+
+/* SEO discovery and real hero photography */
+.home-hero-photo,
+.partnership-hero-photo { margin: 0; }
+.home-hero-photo img { height: clamp(360px, 48vw, 520px); object-position: center 38%; }
+.partnership-hero-photo img { height: clamp(320px, 38vw, 440px); object-position: center; }
+.related-links-section { border-top: 1px solid var(--line); background: var(--paper-deep); }
+.related-links-section h2 { margin-bottom: 24px; }
+.related-links-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
+.related-links-grid a { display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 20px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); }
+.related-links-grid a:hover,.related-links-grid a:focus-visible { border-color: var(--forest); transform: translateY(-1px); }
+.related-links-grid strong { color: var(--forest-dark); font-family: "Fraunces",Georgia,serif; font-size: 1.12rem; }
+.related-links-grid span { color: var(--muted); font-size: .93rem; }
+@media (max-width: 900px) { .related-links-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 620px) { .related-links-grid { grid-template-columns: 1fr; } .home-hero-photo img,.partnership-hero-photo img { height: 310px; } }
