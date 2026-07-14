@@ -1390,3 +1390,40 @@ body,
 .related-links-grid span { color: var(--muted); font-size: .93rem; }
 @media (max-width: 900px) { .related-links-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 620px) { .related-links-grid { grid-template-columns: 1fr; } .home-hero-photo img,.partnership-hero-photo img { height: 310px; } }
+
+/* Connecticut Dungeons & Dragons landing page */
+.dnd-search-section { padding-top: 0; }
+.dnd-search-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 30px 32px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--rust);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(45,39,29,.05);
+}
+.dnd-search-panel h2 { margin-bottom: 8px; }
+.dnd-search-panel .section-text { max-width: 720px; }
+.dnd-landing-hero .hero-grid { align-items: center; }
+.dnd-library-photo { min-height: 360px; }
+.dnd-library-photo img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; object-position: center; }
+.dnd-overview-grid { margin-top: 26px; }
+.dnd-game-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 18px;
+}
+.dnd-listing-card { display: flex; flex-direction: column; align-items: flex-start; min-height: 100%; }
+.dnd-listing-card h3 { margin-bottom: 10px; }
+.dnd-listing-card p { color: var(--muted); }
+.dnd-listing-card .game-subtitle { color: var(--rust); }
+.dnd-card-meta { margin-top: auto; padding-top: 12px; font-size: .92rem; }
+.dnd-listing-card .text-link { margin-top: 8px; font-weight: 700; }
+@media (max-width: 800px) {
+  .dnd-search-panel { align-items: flex-start; flex-direction: column; }
+  .dnd-game-grid { grid-template-columns: 1fr; }
+  .dnd-library-photo,.dnd-library-photo img { min-height: 250px; }
+}
