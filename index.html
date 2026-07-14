@@ -4,18 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    name="description"
-    content="Game Master Society — discover current adventures, meet local Game Masters, and find your next tabletop roleplaying game."
-  />
+  <meta name="description" content="Find welcoming in-person tabletop RPG games in Manchester and Greater Hartford, Connecticut. Browse current campaigns, beginner-friendly tables, local Game Masters, and available seats." />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Game Master Society" />
-  <meta property="og:title" content="Game Master Society" />
-  <meta
-    property="og:description"
-    content="Professional game masters. Better stories. Browse current adventures, meet local GMs, and find your next tabletop roleplaying game."
-  />
+  <meta property="og:title" content="Tabletop RPG Games in Greater Hartford, CT" />
+  <meta property="og:description" content="Find welcoming local tabletop RPG games, beginner-friendly tables, and skilled Game Masters in Manchester and Greater Hartford." />
   <meta property="og:url" content="https://gamemastersociety.com/" />
   <meta property="og:image" content="https://gamemastersociety.com/gms-logo.jpg" />
   <meta property="og:image:secure_url" content="https://gamemastersociety.com/gms-logo.jpg" />
@@ -23,11 +17,8 @@
   <meta property="og:image:alt" content="Game Master Society logo" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Game Master Society" />
-  <meta
-    name="twitter:description"
-    content="Professional game masters. Better stories. Browse current adventures, meet local GMs, and find your next tabletop roleplaying game."
-  />
+  <meta name="twitter:title" content="Tabletop RPG Games in Greater Hartford, CT" />
+  <meta name="twitter:description" content="Browse current tabletop RPG games, beginner-friendly tables, and local Game Masters." />
   <meta name="twitter:image" content="https://gamemastersociety.com/gms-logo.jpg" />
   <meta name="twitter:image:alt" content="Game Master Society logo" />
 
@@ -35,7 +26,8 @@
   <link rel="icon" href="logo.webp" type="image/webp" />
   <meta name="theme-color" content="#24493b" />
 
-  <title>Game Master Society</title>
+  <title>Tabletop RPG Games in Greater Hartford, CT | Game Master Society</title>
+  <link rel="preload" as="image" href="images/home-hero-real.svg" fetchpriority="high" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,34 +35,88 @@
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="style.css?v=20260713-9" />
+  <link rel="stylesheet" href="style.css?v=20260713-10" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://gamemastersociety.com/#organization",
-    "name": "Game Master Society",
-    "url": "https://gamemastersociety.com/",
-    "logo": "https://gamemastersociety.com/logo.webp",
-    "email": "gamemasterssociety@gmail.com",
-    "description": "An independent tabletop roleplaying organization helping players find welcoming games run by skilled local Game Masters in Manchester, Connecticut.",
-    "areaServed": {
-      "@type": "City",
-      "name": "Manchester",
-      "addressRegion": "CT"
-    },
-    "founder": {"@type": "Person", "name": "John Dalterio"},
-    "member": {"@type": "Person", "name": "Mike Castro", "jobTitle": "Guild Master"},
-    "sameAs": [
-      "https://www.instagram.com/gamemastersociety",
-      "https://discord.gg/SBT6Bnp6hb"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gamemastersociety.com/#organization",
+      "name": "Game Master Society",
+      "url": "https://gamemastersociety.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://gamemastersociety.com/logo.webp"
+      },
       "email": "gamemasterssociety@gmail.com",
-      "contactType": "general inquiries"
+      "description": "An independent tabletop roleplaying organization helping players find welcoming games run by skilled local Game Masters in Manchester and Greater Hartford, Connecticut.",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Manchester",
+          "addressRegion": "CT"
+        },
+        {
+          "@type": "City",
+          "name": "Hartford",
+          "addressRegion": "CT"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Greater Hartford, Connecticut"
+        }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "John Dalterio"
+      },
+      "member": {
+        "@type": "Person",
+        "name": "Mike Castro",
+        "jobTitle": "Guild Master"
+      },
+      "sameAs": [
+        "https://www.instagram.com/gamemastersociety",
+        "https://discord.gg/SBT6Bnp6hb"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "gamemasterssociety@gmail.com",
+        "contactType": "general inquiries",
+        "areaServed": "US"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gamemastersociety.com/#website",
+      "url": "https://gamemastersociety.com/",
+      "name": "Game Master Society",
+      "publisher": {
+        "@id": "https://gamemastersociety.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://gamemastersociety.com/#webpage",
+      "url": "https://gamemastersociety.com/",
+      "name": "Tabletop RPG Games in Greater Hartford, CT",
+      "description": "Find welcoming in-person tabletop RPG games in Manchester and Greater Hartford, Connecticut. Browse current campaigns, beginner-friendly tables, local Game Masters, and available seats.",
+      "isPartOf": {
+        "@id": "https://gamemastersociety.com/#website"
+      },
+      "about": {
+        "@id": "https://gamemastersociety.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://gamemastersociety.com/images/home-hero-real.svg"
+      },
+      "inLanguage": "en-US"
     }
-  }
+  ]
+}
   </script>
 </head>
 
@@ -106,6 +152,7 @@
             </button>
             <div id="explore-submenu" class="nav-submenu">
               <a href="systems.html">Game Systems</a>
+              <a href="places-we-play.html">Places We Play</a>
               <a href="past-games.html">Past Adventures</a>
             </div>
           </div>
@@ -149,25 +196,10 @@
             </div>
           </div>
 
-          <aside class="hero-panel">
-            <div class="hero-panel-card">
-              <span class="panel-label">Your next table starts here</span>
-              <ul class="feature-list">
-                <li>Beginner-friendly tables with clear expectations</li>
-                <li>Short adventures and ongoing campaigns</li>
-                <li>Fantasy, horror, mystery, and more</li>
-                <li>Direct contact with the Game Master</li>
-              </ul>
-            </div>
-
-            <div class="hero-panel-card">
-              <span class="panel-label">New to tabletop games?</span>
-              <p>
-                No experience, books, dice, or prepared character are required for beginner-friendly
-                games unless a specific listing says otherwise.
-              </p>
-            </div>
-          </aside>
+          <figure class="hero-photo-card home-hero-photo">
+            <img src="images/home-hero-real.svg" alt="Players gathered around a tabletop roleplaying game with books, dice, and miniatures" width="900" height="1195" decoding="async" fetchpriority="high" />
+            <figcaption><span>A real game night</span>Conversation, choices, and shared stories around the table.</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -407,7 +439,7 @@
               <p class="section-kicker">Community</p>
               <h2>Official Links</h2>
               <p class="section-text">
-                Join the community, follow updates, and help shape future adventures through
+                Join the Greater Hartford tabletop community, follow updates, and help shape future adventures through
                 Discord, Instagram, and the player survey.
               </p>
             </div>
