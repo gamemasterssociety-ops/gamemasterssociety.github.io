@@ -312,6 +312,15 @@
       "title": "Fallout: Modiphius 2d20",
       "system": "Fallout 2d20",
       "summary": "A Fallout 2d20 adventure about surviving and exploring the wasteland through scavenging, hard choices, and action."
+    },
+    {
+      "title": "Empire Records: Damn The Man",
+      "system": "D&D 5e",
+      "gm": "Michelle",
+      "year": 2026,
+      "format": "Short adventure",
+      "summary": "A silly, heartwarming 90s-inspired adventure about saving a record store before midnight.",
+      "details": "A beginner-friendly D&D 5e story inspired by Empire Records, Dazed and Confused, and Can't Hardly Wait, mixing personal goals, missing money, music, and 90s chaos."
     }
   ]
 }
