@@ -23,7 +23,7 @@ body {
   min-width: 320px;
   color: var(--ink);
   background: var(--paper);
-  font-family: "DM Sans", system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
 }
 img { display: block; max-width: 100%; }
@@ -45,7 +45,7 @@ button { cursor: pointer; }
 .brand-logo { width: 58px; height: 58px; object-fit: contain; }
 .brand-wordmark { display: flex; flex-direction: column; line-height: 1.2; }
 .brand-name {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.2rem; font-weight: 700; color: var(--forest-dark);
 }
 .brand-tagline {
@@ -81,7 +81,7 @@ button { cursor: pointer; }
 .eyebrow,.section-kicker { display: inline-block; margin: 0 0 13px; }
 h1,h2,h3,h4 {
   margin: 0; color: var(--forest-dark);
-  font-family: "Fraunces", Georgia, serif; line-height: 1.08;
+  font-family: Georgia, "Times New Roman", serif; line-height: 1.08;
 }
 h1 { font-size: clamp(3rem,6vw,5.7rem); max-width: 12ch; letter-spacing: -.035em; }
 h2 { font-size: clamp(2.1rem,4vw,3.6rem); letter-spacing: -.025em; }
@@ -195,7 +195,7 @@ h2 { font-size: clamp(2.1rem,4vw,3.6rem); letter-spacing: -.025em; }
 .community-link:hover { transform: translateY(-2px); border-color: #9f9179; }
 .community-link-label {
   display: block; margin-bottom: 5px; color: var(--forest);
-  font-family: "Fraunces",Georgia,serif; font-size: 1.12rem; font-weight: 700;
+  font-family: Georgia, "Times New Roman", serif; font-size: 1.12rem; font-weight: 700;
 }
 .community-link-text { color: var(--muted); font-size: .93rem; }
 .site-footer { padding: 42px 0; background: var(--forest-dark); color: #fff; }
@@ -205,7 +205,7 @@ h2 { font-size: clamp(2.1rem,4vw,3.6rem); letter-spacing: -.025em; }
 }
 .footer-brand { display: flex; align-items: center; gap: 13px; }
 .footer-logo { width: 52px; height: 52px; object-fit: contain; }
-.footer-title { margin: 0; font-family: "Fraunces",Georgia,serif; font-size: 1.05rem; }
+.footer-title { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.05rem; }
 .footer-copy,.footer-meta p { margin: 3px 0 0; color: #cdd8d1; font-size: .9rem; }
 .footer-meta a { text-decoration: underline; text-underline-offset: 3px; }
 .empty-state { padding: 24px; border: 1px dashed #b8ad9a; border-radius: 12px; color: var(--muted); }
@@ -370,7 +370,7 @@ body.modal-open { overflow: hidden; }
     linear-gradient(160deg, rgba(255,255,255,.1), transparent 45%),
     var(--forest);
   border-right: 1px solid rgba(0,0,0,.12);
-  font-family: "Fraunces", Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -.02em;
@@ -479,7 +479,7 @@ body.modal-open { overflow: hidden; }
   top: 9px;
   right: 14px;
   color: rgba(36,73,59,.1);
-  font-family: "Fraunces", Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 3.7rem;
   font-weight: 700;
   line-height: 1;
@@ -555,7 +555,7 @@ body.modal-open { overflow: hidden; }
 .partnership-faq details:first-of-type { border-top: 1px solid var(--line); }
 .partnership-faq summary {
   color: var(--forest-dark);
-  font-family: "Fraunces", Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.08rem;
   font-weight: 700;
   cursor: pointer;
@@ -771,7 +771,7 @@ body.modal-open { overflow: hidden; }
 .survey-stats-grid strong {
   display: block;
   color: #e8c780;
-  font-family: "Fraunces", Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   line-height: 1;
 }
@@ -851,7 +851,7 @@ body.modal-open { overflow: hidden; }
 }
 .survey-demand-count strong {
   color: var(--forest);
-  font-family: "Fraunces", Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.45rem;
 }
 .survey-demand-count span { font-size: .75rem; }
@@ -1179,7 +1179,7 @@ body.modal-open { overflow: hidden; }
   top: 5px;
   right: 15px;
   color: rgba(164,73,50,.13);
-  font-family: "Fraunces", Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 5rem;
   font-weight: 700;
   line-height: 1;
@@ -1188,7 +1188,7 @@ body.modal-open { overflow: hidden; }
   position: relative;
   margin: 0;
   color: var(--ink);
-  font-family: "Fraunces", Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.05rem;
   line-height: 1.5;
 }
@@ -1263,7 +1263,7 @@ body.modal-open { overflow: hidden; }
 }
 .hero-photo-card figcaption {
   padding: 14px 16px 16px;
-  font-family: "Fraunces", Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.35;
@@ -1273,7 +1273,7 @@ body.modal-open { overflow: hidden; }
   display: block;
   margin-bottom: 5px;
   color: var(--rust);
-  font-family: "DM Sans", system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: .7rem;
   font-weight: 800;
   letter-spacing: .13em;
@@ -1298,7 +1298,7 @@ body.modal-open { overflow: hidden; }
 }
 .photo-feature-card figcaption strong {
   color: var(--forest-dark);
-  font-family: "Fraunces", Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.3rem, 2.3vw, 2rem);
   line-height: 1.16;
 }
@@ -1386,7 +1386,7 @@ body,
 .related-links-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
 .related-links-grid a { display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 20px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); }
 .related-links-grid a:hover,.related-links-grid a:focus-visible { border-color: var(--forest); transform: translateY(-1px); }
-.related-links-grid strong { color: var(--forest-dark); font-family: "Fraunces",Georgia,serif; font-size: 1.12rem; }
+.related-links-grid strong { color: var(--forest-dark); font-family: Georgia, "Times New Roman", serif; font-size: 1.12rem; }
 .related-links-grid span { color: var(--muted); font-size: .93rem; }
 @media (max-width: 900px) { .related-links-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 620px) { .related-links-grid { grid-template-columns: 1fr; } .home-hero-photo img,.partnership-hero-photo img { height: 310px; } }
