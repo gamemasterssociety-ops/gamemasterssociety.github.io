@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bring a welcoming tabletop RPG event to your Connecticut venue, organization, community, or team with help from Game Master Society." />
+  <meta name="description" content="Bring a welcoming tabletop RPG event to your Greater Hartford venue, organization, community, or team with help from Game Master Society." />
   <link rel="canonical" href="https://gamemastersociety.com/partnerships.html" />
   <link rel="icon" href="logo.webp" type="image/webp" />
   <meta name="theme-color" content="#24493b" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Game Master Society" />
-  <meta property="og:title" content="RPG Events for Connecticut Venues, Organizations & Teams" />
-  <meta property="og:description" content="Plan a beginner night, recurring campaign, community program, or private tabletop experience with Game Master Society." />
+  <meta property="og:title" content="Tabletop RPG Events for Greater Hartford Organizations" />
+  <meta property="og:description" content="Bring a welcoming tabletop RPG event to your Greater Hartford venue, organization, community, or team with help from Game Master Society." />
   <meta property="og:url" content="https://gamemastersociety.com/partnerships.html" />
   <meta property="og:image" content="https://gamemastersociety.com/gms-logo.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="RPG Events for Connecticut Venues, Organizations & Teams" />
-  <meta name="twitter:description" content="Plan a welcoming tabletop RPG event for your venue, organization, community, or team." />
+  <meta name="twitter:title" content="Tabletop RPG Events for Greater Hartford Organizations" />
+  <meta name="twitter:description" content="Bring a welcoming tabletop RPG event to your Greater Hartford venue, organization, community, or team with help from Game Master Society." />
   <meta name="twitter:image" content="https://gamemastersociety.com/gms-logo.jpg" />
-  <title>RPG Events for Venues, Organizations & Teams | Game Master Society</title>
+  <title>Tabletop RPG Events for Greater Hartford Organizations | GMS</title>
+  <link rel="preload" as="image" href="images/greater-hartford-main-street.svg" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20260713-9" />
+  <link rel="stylesheet" href="style.css?v=20260713-10" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -35,12 +36,32 @@
       "name": "Game Master Society",
       "url": "https://gamemastersociety.com/"
     },
-    "areaServed": {
-      "@type": "State",
-      "name": "Connecticut"
-    },
+    "areaServed": [
+      {"@type": "AdministrativeArea", "name": "Greater Hartford, Connecticut"},
+      {"@type": "State", "name": "Connecticut"}
+    ],
     "serviceType": "Tabletop roleplaying event support"
   }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://gamemastersociety.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Partner With GMS",
+      "item": "https://gamemastersociety.com/partnerships.html"
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -63,6 +84,7 @@
             </button>
             <div id="explore-submenu" class="nav-submenu">
               <a href="systems.html">Game Systems</a>
+              <a href="places-we-play.html">Places We Play</a>
               <a href="past-games.html">Past Adventures</a>
             </div>
           </div>
@@ -88,7 +110,7 @@
           <div class="hero-copy">
             <p class="eyebrow">Venues, organizations & private groups</p>
             <h1>Bring a tabletop RPG event to your community.</h1>
-            <p class="hero-text">Game Master Society helps Connecticut organizations offer welcoming tabletop experiences without having to design and run the program from scratch.</p>
+            <p class="hero-text">Game Master Society helps Greater Hartford and central Connecticut organizations offer welcoming tabletop experiences without having to design and run the program from scratch.</p>
             <div class="hero-actions">
               <a class="button button-primary" href="#inquiry">Plan an RPG Event</a>
               <a class="button button-secondary" href="#experience">See Where We Have Played</a>
@@ -96,21 +118,10 @@
               <p id="share-status" class="share-status" role="status" aria-live="polite"></p>
             </div>
           </div>
-          <aside class="hero-panel">
-            <div class="hero-panel-card">
-              <span class="panel-label">Flexible event formats</span>
-              <ul class="feature-list">
-                <li>Beginner-friendly one-shots</li>
-                <li>Recurring campaign nights</li>
-                <li>Library and community programs</li>
-                <li>Private group and team events</li>
-              </ul>
-            </div>
-            <div class="hero-panel-card">
-              <span class="panel-label">Based in Manchester, Connecticut</span>
-              <p>GMS works with local spaces and organizations throughout central Connecticut, depending on the event and Game Master availability.</p>
-            </div>
-          </aside>
+          <figure class="hero-photo-card partnership-hero-photo">
+            <img src="images/greater-hartford-main-street.svg" alt="Main Street in Manchester, Connecticut, in the Greater Hartford region" width="1400" height="1050" decoding="async" fetchpriority="high" />
+            <figcaption><span>Greater Hartford &amp; central Connecticut</span>Local events, built for local spaces and communities.</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -433,7 +444,7 @@
         if (navigator.share) {
           await navigator.share({
             title: "RPG Events for Venues, Organizations & Teams",
-            text: "Bring a welcoming tabletop RPG event to your Connecticut venue, organization, community, or team.",
+            text: "Bring a welcoming tabletop RPG event to your Greater Hartford or central Connecticut venue, organization, community, or team.",
             url
           });
           status.textContent = "Sharing options opened.";
