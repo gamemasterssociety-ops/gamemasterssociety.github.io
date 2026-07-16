@@ -161,6 +161,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const gmsData = await gmsResponse.json();
     const priority = { recruiting: 0, upcoming: 1, running: 2, full: 3, archived: 4 };
     const allGames = Array.isArray(gamesData.games) ? [...gamesData.games].sort((a, b) => (priority[a.status] ?? 5) - (priority[b.status] ?? 5)) : [];
+
+    const palaceOfShade = allGames.find(game => game.title === "Palace of Shade: Doorway to Wonderland");
+    if (palaceOfShade) palaceOfShade.seats_available = 1;
+
     renderGMCards(Array.isArray(gmsData.gms) ? gmsData.gms : []);
 
     if (legacyGamesGrid && !openGamesGrid && !communityGamesGrid) {
