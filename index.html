@@ -20,6 +20,45 @@
   <title>Tabletop RPG Games in Greater Hartford, CT | Game Master Society</title>
   <link rel="preload" as="image" href="images/home-hero-real.svg" fetchpriority="high" />
   <link rel="stylesheet" href="style.css?v=20260715-1" />
+  <style>
+    .game-card .game-card-badges {
+      display: grid;
+      grid-template-columns: 136px;
+      flex: 0 0 136px;
+      width: 136px;
+      align-content: start;
+    }
+
+    .game-card .game-card-badges .game-status,
+    .game-card .game-card-badges .game-format {
+      width: 136px;
+      min-width: 136px;
+      height: 40px;
+      min-height: 40px;
+      padding: 0 12px;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+      .game-card-top {
+        flex-direction: column;
+      }
+
+      .game-card .game-card-badges {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        flex-basis: auto;
+        width: 100%;
+      }
+
+      .game-card .game-card-badges .game-status,
+      .game-card .game-card-badges .game-format {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="site-shell">
