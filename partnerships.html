@@ -111,6 +111,7 @@
             <p class="eyebrow">For venues & community spaces</p>
             <h1>Bring an RPG night to your venue.</h1>
             <p class="hero-text">Game Master Society helps central Connecticut venues plan welcoming tabletop RPG nights, connect with independent Game Masters, and give new players a clear place to start.</p>
+            <p class="hero-note">Game publisher or creator? <a class="text-link" href="#creators">Share an opportunity with interested GMs.</a></p>
             <div class="hero-actions">
               <a class="button button-primary" href="#inquiry">Discuss an RPG Night</a>
               <a class="button button-secondary" href="private-events.html">Planning a Private Event?</a>
@@ -416,6 +417,40 @@
           </form>
         </div>
       </section>
+      <section id="creators" class="content-section phase2-creators-section">
+        <div class="container">
+          <div class="phase2-section-header">
+            <div>
+              <p class="section-kicker">For game publishers &amp; creators</p>
+              <h2>Have a game you'd like local GMs to explore?</h2>
+              <p class="section-text">GMS connects independent tabletop RPG creators with local Game Masters who run games in our community. We're happy to hear about new systems, adventures, settings, early-access materials, and voluntary playtesting opportunities.</p>
+            </div>
+            <p class="phase2-helper">This is a way to introduce an opportunity, not a testing or promotional service. Each Game Master decides whether to participate. GMS cannot guarantee playtests, reviews, promotion, organized sessions, or player participation.</p>
+          </div>
+          <div class="inquiry-layout">
+            <div class="inquiry-copy">
+              <h3>Tell us about your project.</h3>
+              <p>We review submissions before deciding whether to share an opportunity with interested GMS-affiliated Game Masters. Please describe anything participants would need to purchase, install, commit to, or complete.</p>
+              <p>If you are seeking a paid, organized event instead, <a class="text-link" href="private-events.html#private-inquiry">use our private-event inquiry</a>.</p>
+              <div class="inquiry-contact"><strong>Prefer a direct email?</strong><a href="mailto:gamemasterssociety@gmail.com?subject=Creator%20Opportunity">gamemasterssociety@gmail.com</a></div>
+            </div>
+            <form id="creator-inquiry-form" class="inquiry-form">
+              <div class="form-grid">
+                <label><span>Your name</span><input name="contact" required maxlength="100" autocomplete="name" /></label>
+                <label><span>Email</span><input name="email" type="email" required maxlength="160" autocomplete="email" /></label>
+                <label><span>Publisher or project name</span><input name="project" required maxlength="140" /></label>
+                <label><span>Project website <small>optional</small></span><input name="website" type="url" maxlength="250" placeholder="https://example.com" /></label>
+                <label class="form-span"><span>System or product type</span><input name="system" required maxlength="160" placeholder="Pathfinder 2e, original RPG, adventure, GM resource..." /></label>
+                <label class="form-span"><span>What are you offering?</span><textarea name="offer" required rows="3" maxlength="950" placeholder="Materials, sample access, playtest kit, copies for interested GMs..."></textarea></label>
+                <label class="form-span"><span>What are you hoping GMs might do?</span><textarea name="request" required rows="3" maxlength="950" placeholder="Try a game voluntarily, send feedback, explore an unfamiliar system..."></textarea></label>
+                <label class="form-span"><span>Costs, deadlines or obligations</span><textarea name="requirements" required rows="3" maxlength="950" placeholder="State whether participation is free and list any app, account, purchase, deadline or other requirement. Write None if there are none."></textarea></label>
+              </div>
+              <button class="button button-primary" type="submit">Prepare Creator Inquiry Email</button>
+              <p class="form-privacy">Preparing this message does not submit it. Review and send the email in your mail app. GMS does not store form submissions on this website. See our <a href="privacy.html">Privacy Policy</a>.</p>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -454,6 +489,29 @@
         "",
         "Goals and other details:",
         value("details")
+      ].join("\\n");
+      window.location.href = `mailto:gamemasterssociety@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+    document.querySelector("#creator-inquiry-form")?.addEventListener("submit", event => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const value = key => String(data.get(key) || "").trim() || "Not provided";
+      const subject = `Game Publisher / Creator Inquiry: ${value("project")}`;
+      const body = [
+        "GAME PUBLISHER / CREATOR INQUIRY",
+        "",
+        `Contact: ${value("contact")}`,
+        `Email: ${value("email")}`,
+        `Publisher / project: ${value("project")}`,
+        `Website: ${value("website")}`,
+        `System / product: ${value("system")}`,
+        "",
+        "Offered materials / access:", value("offer"),
+        "",
+        "Requested participation:", value("request"),
+        "",
+        "Costs, deadlines or obligations:", value("requirements")
       ].join("\\n");
       window.location.href = `mailto:gamemasterssociety@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
