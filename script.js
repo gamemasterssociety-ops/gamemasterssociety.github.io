@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const displayStatus = game => seatCount(game) === 0 ? "full" : (game.status || "running");
   // "All welcome" is not the same as an explicitly beginner-friendly listing.
   const isBeginnerFriendly = game =>
-    /beginner[\\s-]*friendly/i.test(String(game.experience_level || "")) ||
-    (Array.isArray(game.tags) && game.tags.some(tag => /beginner[\\s-]*friendly/i.test(String(tag))));
+    /beginner[\s-]*friendly/i.test(String(game.experience_level || "")) ||
+    (Array.isArray(game.tags) && game.tags.some(tag => /beginner[\s-]*friendly/i.test(String(tag))));
   const acceptingInquiries = game => {
     const status = displayStatus(game);
     if (status === "full" || status === "archived") return false;
@@ -252,6 +252,15 @@ document.addEventListener("DOMContentLoaded", async () => {
       experienceFilter.value = "beginner";
     }
 
+    const syncExperienceUrl = () => {
+      if (!experienceFilter) return;
+      const url = new URL(window.location.href);
+      if (experienceFilter.value === "beginner") url.searchParams.set("beginner", "1");
+      else url.searchParams.delete("beginner");
+      window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+    };
+    experienceFilter?.addEventListener("change", syncExperienceUrl);
+
     const applyFilters = () => {
       const searchTerm = (searchInput?.value || "").trim().toLowerCase();
       const selectedSystem = systemFilter?.value || "";
@@ -282,6 +291,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (statusFilter) statusFilter.value = "";
       if (formatFilter) formatFilter.value = "";
       if (experienceFilter) experienceFilter.value = "";
+      syncExperienceUrl();
       applyFilters();
     });
     applyFilters();
