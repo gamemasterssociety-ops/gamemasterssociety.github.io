@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const systemFilter = document.getElementById("system-filter");
   const statusFilter = document.getElementById("status-filter");
   const formatFilter = document.getElementById("format-filter");
+  const experienceFilter = document.getElementById("experience-filter");
   const clearFiltersButton = document.getElementById("clear-filters");
   const resultsSummary = document.getElementById("results-summary");
 
@@ -77,6 +78,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const seats = seatCount(game);
     return seats !== null ? seats > 0 : status === "recruiting" || status === "upcoming";
   };
+
+  // Only explicitly marked beginner-friendly listings are included in this filter.
+  const isBeginnerFriendly = game => String(game.experience_level || "").trim().toLowerCase() === "beginner friendly";
 
   const buildFacts = game => {
     const facts = [];
@@ -122,9 +126,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       buildFacts(game).forEach(fact => facts.appendChild(makeChip(fact, "fact-chip")));
       const tags = fragment.querySelector(".game-tags");
       (game.tags || []).forEach(tag => tags.appendChild(makeChip(tag, "tag-chip")));
-      fragment.querySelector(".game-details-button")?.addEventListener("click", () => { window.location.href = gamePageUrl(game.title); });
+      if (isBeginnerFriendly(game) && !(game.tags || []).some(tag => String(tag).toLowerCase().replace(/[-_]/g, " ") === "beginner friendly")) {
+        tags.prepend(makeChip("Beginner friendly", "tag-chip beginner-chip"));
+      }
+      const detailsLink = fragment.querySelector(".game-details-button");
+      if (detailsLink) detailsLink.href = gamePageUrl(game.title);
       const link = fragment.querySelector(".game-link");
-      if (game.discord_link) link.href = game.discord_link;
+      if (game.discord_link) {
+        link.href = game.discord_link;
+        link.textContent = acceptingInquiries(game) ? "Ask the GM in Discord" : "Contact GM in Discord";
+      }
       else {
         link.removeAttribute("href");
         link.textContent = "Link Coming Soon";
@@ -241,15 +252,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     populateSelect(systemFilter, [...new Set(allGames.map(game => game.system).filter(Boolean))].sort(), "All systems");
     populateSelect(statusFilter, [...new Set(allGames.map(game => game.status).filter(Boolean))].sort(), "All statuses", prettyStatus);
     populateSelect(formatFilter, [...new Set(allGames.map(game => game.format).filter(Boolean))].sort(), "All formats", prettyFormat);
+    // A shareable link from Start Here opens the listing with the beginner filter selected.
+    if (experienceFilter && new URLSearchParams(window.location.search).get("experience") === "beginner") {
+      experienceFilter.value = "beginner";
+    }
 
     const applyFilters = () => {
       const searchTerm = (searchInput?.value || "").trim().toLowerCase();
       const selectedSystem = systemFilter?.value || "";
       const selectedStatus = statusFilter?.value || "";
       const selectedFormat = formatFilter?.value || "";
+      const selectedExperience = experienceFilter?.value || "";
       const filtered = allGames.filter(game => {
         const haystack = [game.title, game.subtitle, game.gm, game.system, game.description, game.short_description, game.full_description, game.status, game.format, ...(game.tags || [])].filter(Boolean).join(" ").toLowerCase();
-        return (!searchTerm || haystack.includes(searchTerm)) && (!selectedSystem || game.system === selectedSystem) && (!selectedStatus || game.status === selectedStatus) && (!selectedFormat || game.format === selectedFormat);
+        return (!searchTerm || haystack.includes(searchTerm)) && (!selectedSystem || game.system === selectedSystem) && (!selectedStatus || game.status === selectedStatus) && (!selectedFormat || game.format === selectedFormat) && (!selectedExperience || (selectedExperience === "beginner" && isBeginnerFriendly(game)));
       });
       const openGames = filtered.filter(acceptingInquiries);
       const communityGames = filtered.filter(game => game.status !== "archived" && !openGames.includes(game));
@@ -262,11 +278,22 @@ document.addEventListener("DOMContentLoaded", async () => {
       control?.addEventListener("input", applyFilters);
       control?.addEventListener("change", applyFilters);
     });
+    experienceFilter?.addEventListener("change", () => {
+      const url = new URL(window.location.href);
+      if (experienceFilter.value === "beginner") url.searchParams.set("experience", "beginner");
+      else url.searchParams.delete("experience");
+      window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+      applyFilters();
+    });
     clearFiltersButton?.addEventListener("click", () => {
       if (searchInput) searchInput.value = "";
       if (systemFilter) systemFilter.value = "";
       if (statusFilter) statusFilter.value = "";
       if (formatFilter) formatFilter.value = "";
+      if (experienceFilter) experienceFilter.value = "";
+      const url = new URL(window.location.href);
+      url.searchParams.delete("experience");
+      window.history.replaceState(null, "", url.pathname + url.search + url.hash);
       applyFilters();
     });
     applyFilters();
