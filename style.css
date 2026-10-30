@@ -122,7 +122,7 @@ h2 { font-size: clamp(2.1rem,4vw,3.6rem); letter-spacing: -.025em; }
   padding: 18px; margin-bottom: 24px; background: var(--surface);
   border: 1px solid var(--line); border-radius: var(--radius-md);
 }
-.filters-grid { display: grid; grid-template-columns: 2fr repeat(3,1fr); gap: 12px; }
+.filters-grid { display: grid; grid-template-columns: minmax(0,2fr) repeat(3,minmax(0,1fr)); gap: 12px; }
 .filter-field { display: grid; gap: 6px; }
 .filter-field span {
   color: var(--forest); font-size: .72rem; font-weight: 800;
@@ -135,6 +135,7 @@ h2 { font-size: clamp(2.1rem,4vw,3.6rem); letter-spacing: -.025em; }
 }
 .filters-actions { margin-top: 14px; justify-content: space-between; align-items: center; }
 .results-summary { margin: 0; color: var(--muted); }
+.filter-help { margin: 12px 0 0; color: var(--muted); font-size: .88rem; line-height: 1.45; }
 .card-grid,.gm-grid,.info-grid { display: grid; gap: 18px; }
 .card-grid-wide { grid-template-columns: repeat(3,minmax(0,1fr)); }
 .gm-grid,.info-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
@@ -175,6 +176,7 @@ h2 { font-size: clamp(2.1rem,4vw,3.6rem); letter-spacing: -.025em; }
   background: #f3eee5; color: #5a5f57; border: 1px solid #e1d9cb;
 }
 .tag-chip { background: transparent; }
+.beginner-chip { background: #e5efe8; color: #1f5c43; border-color: #bed6c6; font-weight: 800; }
 .game-short-description,.gm-bio,.info-card p {
   margin: 0; color: var(--muted);
 }
