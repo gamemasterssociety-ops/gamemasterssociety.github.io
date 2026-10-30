@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const systemFilter = document.getElementById("system-filter");
   const statusFilter = document.getElementById("status-filter");
   const formatFilter = document.getElementById("format-filter");
+  const experienceFilter = document.getElementById("experience-filter");
   const clearFiltersButton = document.getElementById("clear-filters");
   const resultsSummary = document.getElementById("results-summary");
 
@@ -64,13 +65,17 @@ document.addEventListener("DOMContentLoaded", async () => {
   const prettyFormat = value => ({ short: "Short Adventure", long: "Long Adventure" }[value] || titleCase(value));
   const gamePageUrl = title => `game-${String(title || "").toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}.html`;
   const pluralize = (count, singular, plural) => `${count} ${count === 1 ? singular : plural}`;
-  const formatCurrency = value => typeof value === "number" ? `${value}` : String(value || "");
+  const formatCurrency = value => typeof value === "number" ? "$" + value : String(value || "");
   const seatCount = game => {
     if (game.seats_available === null || game.seats_available === undefined || game.seats_available === "") return null;
     const count = Number(game.seats_available);
     return Number.isInteger(count) && count >= 0 ? count : null;
   };
   const displayStatus = game => seatCount(game) === 0 ? "full" : (game.status || "running");
+  // "All welcome" is not the same as an explicitly beginner-friendly listing.
+  const isBeginnerFriendly = game =>
+    /beginner[\\s-]*friendly/i.test(String(game.experience_level || "")) ||
+    (Array.isArray(game.tags) && game.tags.some(tag => /beginner[\\s-]*friendly/i.test(String(tag))));
   const acceptingInquiries = game => {
     const status = displayStatus(game);
     if (status === "full" || status === "archived") return false;
@@ -117,6 +122,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       fragment.querySelector(".game-format").textContent = prettyFormat(game.format || "");
       fragment.querySelector(".game-system").textContent = game.system || "System TBA";
       fragment.querySelector(".game-gm").textContent = game.gm ? `GM ${game.gm}` : "GM TBA";
+      const beginnerBadge = fragment.querySelector(".game-beginner-badge");
+      if (beginnerBadge) beginnerBadge.hidden = !isBeginnerFriendly(game);
       fragment.querySelector(".game-short-description").textContent = game.short_description || game.description || "Description coming soon.";
       const facts = fragment.querySelector(".game-facts");
       buildFacts(game).forEach(fact => facts.appendChild(makeChip(fact, "fact-chip")));
@@ -241,24 +248,31 @@ document.addEventListener("DOMContentLoaded", async () => {
     populateSelect(systemFilter, [...new Set(allGames.map(game => game.system).filter(Boolean))].sort(), "All systems");
     populateSelect(statusFilter, [...new Set(allGames.map(game => game.status).filter(Boolean))].sort(), "All statuses", prettyStatus);
     populateSelect(formatFilter, [...new Set(allGames.map(game => game.format).filter(Boolean))].sort(), "All formats", prettyFormat);
+    if (experienceFilter && new URLSearchParams(window.location.search).get("beginner") === "1") {
+      experienceFilter.value = "beginner";
+    }
 
     const applyFilters = () => {
       const searchTerm = (searchInput?.value || "").trim().toLowerCase();
       const selectedSystem = systemFilter?.value || "";
       const selectedStatus = statusFilter?.value || "";
       const selectedFormat = formatFilter?.value || "";
+      const selectedExperience = experienceFilter?.value || "";
       const filtered = allGames.filter(game => {
         const haystack = [game.title, game.subtitle, game.gm, game.system, game.description, game.short_description, game.full_description, game.status, game.format, ...(game.tags || [])].filter(Boolean).join(" ").toLowerCase();
-        return (!searchTerm || haystack.includes(searchTerm)) && (!selectedSystem || game.system === selectedSystem) && (!selectedStatus || game.status === selectedStatus) && (!selectedFormat || game.format === selectedFormat);
+        return (!searchTerm || haystack.includes(searchTerm)) && (!selectedSystem || game.system === selectedSystem) && (!selectedStatus || game.status === selectedStatus) && (!selectedFormat || game.format === selectedFormat) && (!selectedExperience || isBeginnerFriendly(game));
       });
       const openGames = filtered.filter(acceptingInquiries);
       const communityGames = filtered.filter(game => game.status !== "archived" && !openGames.includes(game));
-      renderGameCards(openGamesGrid, openGames, "No open games match these filters. Use the player-interest email below and we can point you toward future opportunities.");
+      const emptyMessage = selectedExperience
+        ? 'No confirmed open beginner-friendly games match these filters. <a href="https://discord.gg/SBT6Bnp6hb" target="_blank" rel="noopener noreferrer">Ask in the GMS Discord</a> or <a href="#player-interest-form">tell us what you would like to play</a>.'
+        : 'No open games match these filters. <a href="https://discord.gg/SBT6Bnp6hb" target="_blank" rel="noopener noreferrer">Ask in the GMS Discord</a> or <a href="#player-interest-form">tell us what you would like to play</a>.';
+      renderGameCards(openGamesGrid, openGames, emptyMessage);
       renderGameCards(communityGamesGrid, communityGames, "No additional community games match these filters.");
-      if (resultsSummary) resultsSummary.innerHTML = `<strong>${openGames.length}</strong> open game${openGames.length === 1 ? "" : "s"} shown`;
+      if (resultsSummary) resultsSummary.textContent = `${openGames.length} open ${selectedExperience ? "beginner-friendly " : ""}game${openGames.length === 1 ? "" : "s"} shown`;
     };
 
-    [searchInput, systemFilter, statusFilter, formatFilter].forEach(control => {
+    [searchInput, systemFilter, statusFilter, formatFilter, experienceFilter].forEach(control => {
       control?.addEventListener("input", applyFilters);
       control?.addEventListener("change", applyFilters);
     });
@@ -267,6 +281,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (systemFilter) systemFilter.value = "";
       if (statusFilter) statusFilter.value = "";
       if (formatFilter) formatFilter.value = "";
+      if (experienceFilter) experienceFilter.value = "";
       applyFilters();
     });
     applyFilters();
