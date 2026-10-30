@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const prettyFormat = value => ({ short: "Short Adventure", long: "Long Adventure" }[value] || titleCase(value));
   const gamePageUrl = title => `game-${String(title || "").toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}.html`;
   const pluralize = (count, singular, plural) => `${count} ${count === 1 ? singular : plural}`;
-  const formatCurrency = value => typeof value === "number" ? `${value}` : String(value || "");
+  const formatCurrency = value => typeof value === "number" ? "$" + value : String(value || "");
   const seatCount = game => {
     if (game.seats_available === null || game.seats_available === undefined || game.seats_available === "") return null;
     const count = Number(game.seats_available);
