@@ -1427,3 +1427,38 @@ body,
   .dnd-game-grid { grid-template-columns: 1fr; }
   .dnd-library-photo,.dnd-library-photo img { min-height: 250px; }
 }
+
+
+/* Phase 1: clearer beginner discovery and first-game navigation */
+.hero-note {
+  margin: 17px 0 0;
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: .95rem;
+}
+.filter-hint {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+.filter-hint a,
+.empty-state a {
+  color: var(--forest);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.game-beginner-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  width: fit-content;
+  padding: 0 10px;
+  border: 1px solid #a2c9b2;
+  border-radius: 999px;
+  background: #e5f3e9;
+  color: #205b3d;
+  font-size: .76rem;
+  font-weight: 800;
+}
+.game-beginner-badge[hidden] { display: none; }
