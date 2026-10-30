@@ -19,7 +19,7 @@
   <meta name="theme-color" content="#24493b" />
   <title>Tabletop RPG Games in Greater Hartford, CT | Game Master Society</title>
   <link rel="preload" as="image" href="images/home-hero-real.svg" fetchpriority="high" />
-  <link rel="stylesheet" href="style.css?v=20260715-1" />
+  <link rel="stylesheet" href="style.css?v=20261029-phase1" />
   <style>
     .game-card .game-card-badges {
       display: grid;
@@ -107,10 +107,10 @@
             <h1>Find a welcoming local tabletop game.</h1>
             <p class="hero-text">Game Master Society connects players with independent local Game Masters running in-person tabletop roleplaying games throughout central Connecticut.</p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#current-games">Find an Open Game</a>
-              <a class="button button-secondary" href="become-a-game-master.html">Run Games With GMS</a>
+              <a class="button button-primary" href="#current-games">Find a Game</a>
+              <a class="button button-secondary" href="new-players.html">New? Start Here</a>
             </div>
-            <p class="hero-note"><a class="text-link" href="new-players.html">New to tabletop roleplaying games? Start here.</a></p>
+            <p class="hero-note">Never played before? You can join a beginner-friendly table without experience, books, dice, or a prepared character unless its listing says otherwise.</p>
           </div>
           <figure class="hero-photo-card home-hero-photo">
             <img src="images/home-hero-real.svg" alt="Players gathered around a tabletop roleplaying game with books, dice, and miniatures" width="900" height="1195" decoding="async" fetchpriority="high" />
@@ -120,7 +120,11 @@
       </section>
 
       <section class="announcement-strip">
-        <div class="container announcement-inner"><p><strong>Looking for a seat?</strong> Open and recruiting games appear first. Visit a listing for details, then contact the Game Master through its Discord channel.</p></div>
+        <div class="container announcement-inner"><p><strong>Joining a game?</strong> Find a listing, join the GMS Discord, then visit that game's channel to confirm seats, schedule, payment, and other details directly with the Game Master.</p></div>
+      </section>
+
+      <section class="content-section gateway-section">
+        <div class="container gateway-panel"><div><p class="section-kicker">New Player Gateway</p><h2>Your first game starts here.</h2><p class="section-text">No experience, books, dice, or prepared character are required unless a specific listing says otherwise.</p></div><div class="gateway-actions"><a class="button button-primary" href="new-players.html">Start Here</a></div></div>
       </section>
 
       <section id="current-games" class="content-section">
@@ -131,8 +135,10 @@
               <label class="filter-field"><span>Search</span><input id="game-search" type="search" placeholder="Search by title, GM, system, or description" /></label>
               <label class="filter-field"><span>System</span><select id="system-filter"><option value="">All systems</option></select></label>
               <label class="filter-field"><span>Format</span><select id="format-filter"><option value="">All formats</option></select></label>
+              <label class="filter-field"><span>Experience</span><select id="experience-filter"><option value="">All experience levels</option><option value="beginner">Beginner friendly</option></select></label>
             </div>
-            <div class="filters-actions"><p id="results-summary" class="results-summary">Loading games...</p><button id="clear-filters" class="button button-secondary" type="button">Clear Filters</button></div>
+            <div class="filters-actions"><p id="results-summary" class="results-summary" role="status" aria-live="polite">Loading games...</p><button id="clear-filters" class="button button-secondary" type="button">Clear Filters</button></div>
+            <p class="filter-hint">New to tabletop RPGs? Choose “Beginner friendly” above, or <a href="new-players.html">read the first-game guide</a>.</p>
           </div>
           <div id="open-games-grid" class="card-grid card-grid-wide" aria-live="polite"></div>
         </div>
@@ -162,9 +168,7 @@
         </div>
       </section>
 
-      <section class="content-section gateway-section">
-        <div class="container gateway-panel"><div><p class="section-kicker">New Player Gateway</p><h2>Your first game starts here.</h2><p class="section-text">No experience, books, dice, or prepared character are required unless a specific listing says otherwise.</p></div><div class="gateway-actions"><a class="button button-primary" href="new-players.html">Start Here</a></div></div>
-      </section>
+
 
       <section class="content-section">
         <div class="container gateway-panel"><div><p class="section-kicker">For Game Masters</p><h2>Run your games. Keep your independence. Reach more local players.</h2><p class="section-text">GMS helps independent local Game Masters promote public games, connect with players, access shared resources, and explore possible venue opportunities.</p></div><div class="gateway-actions"><a class="button button-primary" href="become-a-game-master.html">Run Games With GMS</a></div></div>
@@ -211,10 +215,10 @@
     <footer class="site-footer"><div class="container footer-inner"><div class="footer-brand"><img src="logo.webp" alt="" class="footer-logo" /><div><p class="footer-title">Game Master Society</p><p class="footer-copy">Professional game masters. Better stories.</p></div></div><div class="footer-meta"><p>General inquiries: <a href="mailto:gamemasterssociety@gmail.com">gamemasterssociety@gmail.com</a></p><p>Tickets are usually handled directly by the Game Master running the session unless the event listing says otherwise.</p><p><a href="privacy.html">Privacy Policy</a></p></div></div></footer>
   </div>
 
-  <template id="game-card-template"><article class="game-card"><div class="game-card-top"><div class="game-card-heading"><p class="game-subtitle"></p><h4 class="game-title"></h4></div><div class="game-card-badges"><span class="game-status"></span><span class="game-format"></span></div></div><div class="game-meta"><span class="game-system"></span><span class="game-gm"></span></div><p class="game-short-description"></p><div class="game-facts"></div><div class="game-tags"></div><div class="game-card-actions"><button class="button button-small button-secondary game-details-button" type="button">View Game</button><a class="button button-small button-primary game-link" target="_blank" rel="noopener noreferrer">Inquire in Discord</a></div></article></template>
+  <template id="game-card-template"><article class="game-card"><div class="game-card-top"><div class="game-card-heading"><p class="game-subtitle"></p><h4 class="game-title"></h4></div><div class="game-card-badges"><span class="game-status"></span><span class="game-format"></span></div></div><div class="game-meta"><span class="game-system"></span><span class="game-gm"></span><span class="game-beginner-badge" hidden>Beginner friendly</span></div><p class="game-short-description"></p><div class="game-facts"></div><div class="game-tags"></div><div class="game-card-actions"><button class="button button-small button-secondary game-details-button" type="button">View Game</button><a class="button button-small button-primary game-link" target="_blank" rel="noopener noreferrer">Inquire in Discord</a></div></article></template>
   <template id="gm-card-template"><article class="gm-card"><h4 class="gm-name"></h4><p class="gm-role">Game Master</p><p class="gm-bio"></p><a class="button button-small button-secondary gm-link" target="_blank" rel="noopener noreferrer">Visit GM Channel</a></article></template>
 
-  <script src="script.js?v=20261029-1"></script>
+  <script src="script.js?v=20261029-phase1"></script>
   <script>
     document.querySelector("#player-interest-form")?.addEventListener("submit", event => {
       event.preventDefault();
