@@ -273,6 +273,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error(error);
     showEmptyState(openGamesGrid || legacyGamesGrid, "Unable to load games right now.");
     showEmptyState(communityGamesGrid, "Unable to load community games right now.");
-    showEmptyState(gmGrid, "Unable to load Game Masters right now.");
+    if (gmGrid && gmGrid.childElementCount === 0) {
+      showEmptyState(gmGrid, "Unable to load Game Masters right now.");
+    }
   }
 });
