@@ -83,7 +83,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (game.price_per_session !== undefined && game.price_per_session !== null) facts.push(`${formatCurrency(game.price_per_session)}/session`);
     else if (game.price) facts.push(String(game.price));
     const seats = seatCount(game);
-    if (seats !== null) facts.push(seats > 0 ? `${seats} open ${seats === 1 ? "seat" : "seats"}` : "No seats currently available");
+    if (displayStatus(game) === "full") facts.push("No seats currently available");
+    else if (seats !== null) facts.push(seats > 0 ? `${seats} open ${seats === 1 ? "seat" : "seats"}` : "No seats currently available");
     else if (game.players_min && game.players_max) facts.push(`${game.players_min}-${game.players_max} players`);
     else if (game.players_max) facts.push(`Up to ${game.players_max} players`);
     if (game.session_length_hours) facts.push(pluralize(game.session_length_hours, "hour", "hours"));
@@ -140,14 +141,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     const hero = document.querySelector(".game-detail-hero");
     if (!game || !hero) return;
 
-    const seats = seatCount(game);
+    const seats = displayStatus(game) === "full" ? 0 : seatCount(game);
     const facts = {
       "Game Master": game.gm,
       "System": game.system,
       "Price": game.price_per_session != null ? `${formatCurrency(game.price_per_session)} per session` : game.price,
       "Schedule": game.schedule,
       "Experience": game.experience_level,
-      "Seats available": seats,
+      "Seats available": seats === null ? "Ask the Game Master" : seats,
       "Table size": game.players_max
         ? `Up to ${game.players_max} players${seats !== null && seats > 0 ? ` · ${seats} ${seats === 1 ? "seat" : "seats"} open` : ""}`
         : null
@@ -163,7 +164,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (statusBadges[1]) {
       statusBadges[1].textContent = seats !== null && seats > 0
         ? `${seats} open ${seats === 1 ? "seat" : "seats"}` : "No seats open";
-      statusBadges[1].hidden = seats === null;
+      if (seats === null) statusBadges[1].remove();
     }
 
     const eyebrow = hero.querySelector(".eyebrow");
